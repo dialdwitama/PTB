@@ -18,23 +18,18 @@
                     <!--dalam tabel--->
                     <table class="table table-bordered table-striped table-hover"> 
                         <tr>
-                            <td width="200">Nomor Perkara</td> <td><?= $data['no_perkara'] ?></td>
+                            <td width="200">Kode</td> <td><?= $data['kode'] ?></td>
                         </tr>
                         <tr>
-                            <td>Nama Peminjam</td> <td><?= $data['peminjam'] ?></td>
+                            <td>Nama Perguruan Tinggi</td> <td><?= $data['pt'] ?></td>
                         </tr>
                         <tr>
-                            <td>Tanggal Pinjam</td> <td><?= $data['tgl_pinjam'] ?></td>
+                            <td>Tanggal Monev</td> <td><?= $data['tglmonev'] ?></td>
                         </tr>
 						<tr>
-                            <td>Tanggal Kembali</td> <td><?= $data['tgl_kembali'] ?></td>
+                            <td>Permasalahan</td> <td><?= $data['masalah'] ?></td>
                         </tr>
-                        <tr>
-                            <td>Lama Pinjam</td> <td><?= $data['lama_pinjam'] ?></td>
-                        </tr>
-						<tr>
-                            <td>Keterangan</td> <td><?= $data['keterangan'] ?></td>
-                        </tr>
+                        
                     </table>
 				
                 </div> <!--end panel-body-->
