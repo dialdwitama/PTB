@@ -15,14 +15,14 @@ if(!isset($_SESSION ['idsesi'])) {
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>No.</th><th>Nomor Perkara</th><th>Nama Peminjam</th><th>Tanggal Pinjam</th><th>Tanggal Kembali</th><th>Lama Pinjaman</th><th>ACTIONS</th>
+                                <th>No</th><th>Kode</th><th>Nama Perguruan Tinggi</th><th>Tanggal Monev</th><th>Permasalahan</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!--ambil data dari database, dan tampilkan kedalam tabel-->
                             <?php
                             //buat sql untuk tampilan data, gunakan kata kunci select
-                            $sql = "SELECT * FROM peminjaman";
+                            $sql = "SELECT * FROM monev";
                             $query = mysqli_query($koneksi, $sql) or die("SQL Anda Salah");
                             //Baca hasil query dari databse, gunakan perulangan untuk
                             //Menampilkan data lebh dari satu. disini akan digunakan
@@ -35,21 +35,18 @@ if(!isset($_SESSION ['idsesi'])) {
                                 ?>
                                 <tr>
                                     <td><?= $nomor ?></td>
-									<td><?= $data['no_perkara'] ?></td>
-									<td><?= $data['peminjam'] ?></td>
-									<td><?= $data['tgl_pinjam'] ?></td>
-                  <td><?= $data['tgl_kembali'] ?> &nbsp <a href="?page=peminjaman&actions=kembaliArsip&nope=<?= $data['no_perkara'] ?>" class="btn btn-info btn-xs">
-											<span class="fa fa-forward"></span></a>
-									</td>
-									<td><?= $data['lama_pinjam'] ?> hari</td>
+									<td><?= $data['kode'] ?></td>
+									<td><?= $data['pt'] ?></td>
+									<td><?= $data['tglmonev'] ?></td>
+                                    <td><?= $data['masalah'] ?></td>
                                     <td>
-                                        <a href="?page=peminjaman&actions=detail&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
+                                        <a href="?page=peminjaman&actions=detail&id=<?= $data['kode'] ?>" class="btn btn-info btn-xs">
                                             <span class="fa fa-eye"></span>
                                         </a>
-                                        <a href="?page=peminjaman&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=peminjaman&actions=edit&id=<?= $data['kode'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-                                        <a href="?page=peminjaman&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=peminjaman&actions=delete&id=<?= $data['kode'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
