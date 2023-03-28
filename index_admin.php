@@ -7,7 +7,7 @@ require 'config/koneksi.php'; ?>
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>SIA PN Kisaran</title>
+        <title>SI PTB</title>
         <link href="Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="Assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="Assets/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
