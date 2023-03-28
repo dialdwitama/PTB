@@ -41,7 +41,7 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['tglProgressTerakhir'] ?></td>
                                     <td><?= $data['deadline'] ?></td>
                                     <td><?= $data['stat'] ?></td>
-                                    <td><?= $data['perhitungan'] ?></td>
+                                    <td><?= $data['progressReport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                     <td>
                                         <a href="?page=arsip&actions=detail&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
