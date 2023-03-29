@@ -9,7 +9,7 @@ if(!isset($_SESSION ['idsesi'])) {
         <div class="col-xs-12">
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><span class="fa fa-user-plus"></span> Riwayat Peminjaman</h3>
+                    <h3 class="panel-title"><span class="fa fa-user-plus"></span> Data Monev</h3>
                 </div>
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
@@ -40,13 +40,13 @@ if(!isset($_SESSION ['idsesi'])) {
 									<td><?= $data['tglmonev'] ?></td>
                                     <td><?= $data['masalah'] ?></td>
                                     <td>
-                                        <a href="?page=peminjaman&actions=detail&id=<?= $data['no'] ?>" class="btn btn-info btn-xs">
+                                        <a href="?page=peminjaman&actions=detail&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
                                             <span class="fa fa-eye"></span>
                                         </a>
-                                        <a href="?page=peminjaman&actions=edit&id=<?= $data['no'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=peminjaman&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-                                        <a href="?page=peminjaman&actions=delete&id=<?= $data['no'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=peminjaman&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
