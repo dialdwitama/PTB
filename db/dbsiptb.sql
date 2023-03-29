@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2023 at 06:10 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Waktu pembuatan: 28 Mar 2023 pada 09.59
+-- Versi server: 10.4.27-MariaDB
+-- Versi PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,31 +24,28 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `monev`
+-- Struktur dari tabel `monev`
 --
 
 CREATE TABLE `monev` (
   `no` int(5) NOT NULL,
-  `perguruants` varchar(50) NOT NULL,
-  `badanPenyelenggara` varchar(50) NOT NULL,
-  `alpddikti` varchar(100) NOT NULL,
-  `aldirektori` varchar(100) NOT NULL,
-  `almonev` varchar(100) NOT NULL,
-  `hasilMonev` varchar(100) NOT NULL,
-  `id` int(5) NOT NULL
+  `kode` int(10) NOT NULL,
+  `pt` varchar(100) NOT NULL,
+  `tglmonev` date DEFAULT NULL,
+  `masalah` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `monev`
+-- Dumping data untuk tabel `monev`
 --
 
-INSERT INTO `monev` (`no`, `perguruants`, `badanPenyelenggara`, `alpddikti`, `aldirektori`, `almonev`, `hasilMonev`, `id`) VALUES
-(1, 'Politeknik Maritim Eka Subang', 'Yayasan Pendidikan Eka Utama', 'Kab. Subang - Prov. Jawa Barat - Indonesia', 'Kabupaten Subang - Jawa Barat', 'Jl. Kapten Hanafiah No.45, Kel.Karanganyar, Kec.Subang, Kab.Subang, Jawa Barat`, `1. Lahan Perpustak', '1. Lahan Perpustakaan seluas 32,5 M2 (belum memenuhi)\r\n2. Judul buku sebanyak 136 (belum memenuhi)\r\n', 1);
+INSERT INTO `monev` (`no`, `kode`, `pt`, `tglmonev`, `masalah`) VALUES
+(1, 12121, 'Universitas Widyatama', '2023-03-08', '1.Lahan Perpustakaan Seluas 84 M2 (belum memenuhi)\r\n2.Judul buku sebanyak 162 (belum memenuhi)\r\n3.Program D3 Teknik Informatika di pantau BAN-PT karena Tidak Terakreditasi');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pts`
+-- Struktur dari tabel `pts`
 --
 
 CREATE TABLE `pts` (
@@ -64,7 +61,7 @@ CREATE TABLE `pts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `pts`
+-- Dumping data untuk tabel `pts`
 --
 
 INSERT INTO `pts` (`id`, `kode`, `pt`, `progressTerakhir`, `tglProgressTerakhir`, `deadline`, `stat`, `perhitungan`, `pic`) VALUES
@@ -73,7 +70,7 @@ INSERT INTO `pts` (`id`, `kode`, `pt`, `progressTerakhir`, `tglProgressTerakhir`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -86,7 +83,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`username`, `paswd`, `email`, `nama`, `level`, `ket`) VALUES
@@ -97,35 +94,35 @@ INSERT INTO `user` (`username`, `paswd`, `email`, `nama`, `level`, `ket`) VALUES
 --
 
 --
--- Indexes for table `monev`
+-- Indeks untuk tabel `monev`
 --
 ALTER TABLE `monev`
   ADD PRIMARY KEY (`no`);
 
 --
--- Indexes for table `pts`
+-- Indeks untuk tabel `pts`
 --
 ALTER TABLE `pts`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`username`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `monev`
+-- AUTO_INCREMENT untuk tabel `monev`
 --
 ALTER TABLE `monev`
-  MODIFY `no` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `no` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `pts`
+-- AUTO_INCREMENT untuk tabel `pts`
 --
 ALTER TABLE `pts`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
