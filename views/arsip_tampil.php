@@ -9,7 +9,7 @@ if(!isset($_SESSION ['idsesi'])) {
         <div class="col-xs-12">
             <div class="panel panel-success">
                 <div class="panel-heading">
-                    <h3 class="panel-title"><span class="fa fa-user-plus"></span> Data Arsip</h3>
+                    <h3 class="panel-title"><span class="fa fa-user-plus"></span> Data PTS Bermasalah</h3>
                 </div>
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
@@ -66,7 +66,6 @@ if(!isset($_SESSION ['idsesi'])) {
                                 <td colspan="7">
                                     <a href="?page=arsip&actions=tambah" class="btn btn-info btn-sm">
                                         Tambah Data
-
                                     </a>
                                 </td>
                             </tr>
@@ -74,8 +73,6 @@ if(!isset($_SESSION ['idsesi'])) {
                     </table>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
-

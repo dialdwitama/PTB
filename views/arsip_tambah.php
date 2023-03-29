@@ -83,19 +83,17 @@
 <?php
 if($_POST){
     //Ambil data dari form
-  $ruang=$_POST['ruang_arsip'];
-	$rak=$_POST['no_rak'];
-	$laci=$_POST['no_laci'];
-	$boks=$_POST['no_boks'];
-  $arsip=$_POST['para_pihak'];
-	$noperkara=$_POST['no_perkara'];
-  $tglmasuk=$_POST['tgl_masuk'];
-  $pengantar=$_POST['pengantar'];
-	$penerima=$_POST['penerima'];
-  $status=$_POST['status'];
-	$ket=$_POST['ket'];
+  $id=$_POST['id'];
+	$kode=$_POST['kode'];
+	$pt=$_POST['pt'];
+	$progressTerakhir=$_POST['progressTerakhir'];
+  $tglProgressTerakhir=$_POST['tglProgressTerakhir'];
+	$deadline=$_POST['deadline'];
+  $stat=$_POST['stat'];
+  $perhitungan=$_POST['perhitungan'];
+	$pic=$_POST['pic'];
     //buat sql
-    $sql="INSERT INTO arsip VALUES ('','$ruang','$rak','$laci','$boks','$arsip','$noperkara','$tglmasuk','$penerima','$pengantar','$status','$ket')";
+    $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$perhitungan','$pic')";
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Arsip Error");
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
