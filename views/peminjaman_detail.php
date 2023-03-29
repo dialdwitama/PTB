@@ -3,12 +3,12 @@
         <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Informasi Detail Peminjaman Arsip</h3>
+                    <h3 class="panel-title">Informasi Detail Data Monev PT</h3>
                 </div>
                 <div class="panel-body">
                     <!--Menampilkan data detail arsip-->
                     <?php
-                    $sql = "SELECT *FROM peminjaman WHERE id='" . $_GET ['id'] . "'";
+                    $sql = "SELECT *FROM detail_monev WHERE id='" . $_GET ['id'] . "'";
                     //proses query ke database
                     $query = mysqli_query($koneksi, $sql) or die("SQL Detail error");
                     //Merubaha data hasil query kedalam bentuk array
@@ -18,25 +18,32 @@
                     <!--dalam tabel--->
                     <table class="table table-bordered table-striped table-hover"> 
                         <tr>
-                            <td width="200">Kode</td> <td><?= $data['kode'] ?></td>
+                            <td width="200">id</td> <td><?= $data['id'] ?></td>
                         </tr>
                         <tr>
-                            <td>Nama Perguruan Tinggi</td> <td><?= $data['pt'] ?></td>
+                            <td>Alamat Monev</td> <td><?= $data['a_monev'] ?></td>
                         </tr>
                         <tr>
-                            <td>Tanggal Monev</td> <td><?= $data['tglmonev'] ?></td>
+                            <td>Alamat Direktori</td> <td><?= $data['a_direk'] ?></td>
                         </tr>
 						<tr>
-                            <td>Permasalahan</td> <td><?= $data['masalah'] ?></td>
+                            <td>Alamat PDDIKTI </td> <td><?= $data['a_pddikti'] ?></td>
                         </tr>
-                        
+                        <tr>
+                            <td>Hasil Monev </td> <td><?= $data['h_monev'] ?></td>
+                        </tr>
                     </table>
 				
                 </div> <!--end panel-body-->
                 <!--panel footer--> 
                 <div class="panel-footer">
                     <a href="?page=peminjaman&actions=tampil" class="btn btn-success btn-sm">
-                        Kembali ke Data Peminjaman </a>
+                        Kembali ke Data Monev </a>
+
+                        
+                        <a href="?page=peminjaman&actions=edit_detail_monev&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
+                                            <span class="fa fa-edit"></span>
+                                        </a>
 
                 </div>
                 <!--end panel footer-->
