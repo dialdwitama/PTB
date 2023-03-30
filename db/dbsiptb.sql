@@ -519,7 +519,7 @@ CREATE TABLE `pts` (
   `kode` int(25) NOT NULL,
   `pt` varchar(100) NOT NULL,
   `progressTerakhir` varchar(150) NOT NULL,
-  `tglProgressTerakhir` date NOT NULL,
+  `tgl` date NOT NULL,
   `deadline` date NOT NULL,
   `stat` varchar(50) NOT NULL,
   `progressReport` varchar(150) NOT NULL,
