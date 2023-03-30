@@ -74,7 +74,7 @@ $data= mysqli_fetch_array($ambil);
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-success" name="submit">
                                     <span class="fa fa-edit"></span> Update Data PTB</button>
                             </div>
                         </div>
@@ -108,11 +108,12 @@ if($_POST){
     $sql="UPDATE pts SET kode='$kode',pt='$pt',progressTerakhir='$progress',tglProgressTerakhir='$tgl',deadline='$deadline',
 	stat='$status',progressReport='$progrep',pic='$pic' WHERE id ='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
+    }
+    
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
     }else{
         echo "<script>alert('Edit Data Gagal');<script>";
-    }
     }
 
 ?>
