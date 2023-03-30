@@ -100,7 +100,7 @@ if($_POST){
 	$pic=$_POST['pic'];
     //buat sql
     $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$progreport','$pic')";
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Arsip Error");
+    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
     }else{
