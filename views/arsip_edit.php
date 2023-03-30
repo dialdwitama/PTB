@@ -31,86 +31,18 @@ $data= mysqli_fetch_array($ambil);
                                 <input type="text" name="progress" value="<?=$data['progressTerakhir']?>"class="form-control" id="inputEmail3" placeholder="Progress Terakhir">
                             </div>
                         </div>
-						<!--untuk tanggal lahir form tahun-bulan-tanggal 1998-10-10-->
                         <div class="form-group">
-
-
-                            <label for="tgl" class="col-sm-3 control-label">Tanggal Progress Terakhir</label>
-                            <!--untuk tahun-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="tahun" class="form-control">
-                                    <?php for($i=2023;$i>1980;$i--) {?>
-                                    <option value="<?=$i?>"> <?=$i?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
+                            <label for="progress" class="col-sm-3 control-label">Tanggal Progress</label>
+                            <div class="col-sm-9">
+                                <input type="date" name="tgl" value="<?=$data['tglProgressTerakhir']?>"class="form-control" id="inputEmail3">
                             </div>
-                            <!--Untuk Bulan-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="bulan" class="form-control">
-                                    <?php 
-                                    $bulan=  array("","Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
-                                    for($j=12;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$bulan[$j]?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-                            <!--Untuk Tanggal-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="tanggal" class="form-control">
-                                    <?php for($k=31;$k>0;$k--) {?>
-                                    <option value="<?=$k?>"> <?=$k?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-
                         </div>
-                        <!--end tanggal lahir-->
-						<!--untuk deadline form tahun-bulan-tanggal 1998-10-10-->
                         <div class="form-group">
-
-
                             <label for="deadline" class="col-sm-3 control-label">Deadline</label>
-                            <!--untuk tahun-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="tahun" class="form-control">
-                                    <?php for($i=2023;$i>1980;$i--) {?>
-                                    <option value="<?=$i?>"> <?=$i?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
+                            <div class="col-sm-9">
+                                <input type="date" name="tgl" value="<?=$data['deadline']?>"class="form-control" id="inputEmail3">
                             </div>
-                            <!--Untuk Bulan-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="bulan" class="form-control">
-                                    <?php 
-                                    $bulan=  array("","Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
-                                    for($j=12;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$bulan[$j]?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-                            <!--Untuk Tanggal-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="tanggal" class="form-control">
-                                    <?php for($k=31;$k>0;$k--) {?>
-                                    <option value="<?=$k?>"> <?=$k?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-
                         </div>
-                        <!--end tanggal lahir-->
                         
                         <!--Status-->
                         <div class="form-group">
@@ -167,8 +99,8 @@ if($_POST){
     $kode=$_POST['kode'];
     $pt=$_POST['pt'];
 	$progress=$_POST['progressTerakhir'];
-    $tgl=$_POST['tahun']."_".$_POST['bulan']."_".$_POST['tanggal'];
-	$deadline=$_POST['tahun']."_".$_POST['bulan']."_".$_POST['tanggal'];
+    $tgl=$_POST['tglProgressTerakhir'];
+	$deadline=$_POST['deadline'];
     $status=$_POST['stat'];
     $progrep=$_POST['progressReport'];
 	$pic=$_POST['pic'];
