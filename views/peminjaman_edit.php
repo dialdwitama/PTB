@@ -27,52 +27,26 @@ $data= mysqli_fetch_array($ambil);
                         </div>
 						
 						<!--untuk tanggal lahir form tahun-bulan-tanggal 1998-10-10-->
+                       
                         <div class="form-group">
-                           
-                        <label for="tglmonev" class="col-sm-3 control-label">Tanggal Monev</label>
-                            <!--untuk tahun-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="tahun" class="form-control">
-                                    <?php for($i=2023;$i>1980;$i--) {?>
-                                    <option value="<?=$i?>"> <?=$i?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-                            <!--Untuk Bulan-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="bulan" class="form-control">
-                                    <?php 
-                                    $bulan=  array("","Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
-                                    for($j=12;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$bulan[$j]?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-                            <!--Untuk Tanggal-->
-                            <div class="col-sm-2 col-xs-9">
-                                <select name="tanggal" class="form-control">
-                                    <?php for($k=31;$k>0;$k--) {?>
-                                    <option value="<?=$k?>"> <?=$k?> </option>
-                                    <?php }?>
-                                    
-                                </select>
-
-                            </div>
-
-                        </div>
-                        <!--end tanggal--> 
-						
-						
-                        <div class="form-group">
-                            <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
+                            <label for="tglmonev" class="col-sm-3 control-label">Tanggal Monev</label>
                             <div class="col-sm-9">
-                                <input type="text" name="masalah" value="<?=$data['masalah']?>" class="form-control" id="inputPassword3" placeholder="Input Permasalahan">
+                                <input type="date" name="tglmonev" value="<?=$data['tglmonev']?>"class="form-control" id="inputEmail3">
                             </div>
                         </div>
+             
+                  <div class="form-group">
+                  <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
+                  <div class="col-sm-9">
+                <?php
+                    // deklarasi variabel teks
+                    $teks = "";
+                ?>
+                <textarea id="teks" name="teks" rows="5" cols="30" class="form-control"><?php echo $teks; ?></textarea>
+        </div>
+    </form>
+
+
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
                                 <button type="submit" class="btn btn-success">
@@ -99,10 +73,10 @@ if($_POST){
     //Ambil data dari form
     $kode=$_POST['kode'];
 	$pt=$_POST['pt'];
-	$tglmonev=$_POST['monev']."-".$_POST['bulan']."-".$_POST['tanggal'];
+	$tglmonev=$_POST['tglmonev'];
     $masalah=$_POST['masalah'];
     //buat sql
-    $sql="UPDATE monev SET kode = '$kode', pt='$pt', tgl_monev='$tglmonev', masalah='$masalah' WHERE id='$id'"; 
+    $sql="UPDATE monev SET kode = '$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE id='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
