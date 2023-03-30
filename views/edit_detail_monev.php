@@ -1,6 +1,6 @@
 <?php
 $id=$_GET['id'];
-$ambil=  mysqli_query($koneksi, "SELECT * FROM detail_monev WHERE id='$id'") or die ("SQL Edit error");
+$ambil=  mysqli_query($koneksi, "SELECT * FROM detail_monev WHERE id_monev='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
 <div class="container">
@@ -61,13 +61,13 @@ $data= mysqli_fetch_array($ambil);
 <?php 
 if($_POST){
     //Ambil data dari form
-    $id=$_POST['id'];
+    $id=$_POST['id_monev'];
 	$a_monev=$_POST['a_monev'];
     $a_direk=$_POST['a_direk'];
     $a_pddikti=$_POST['a_pddikti'];
     $h_monev=$_POST['h_monev'];
     //buat sql
-    $sql="UPDATE detail_monev SET id = '$id', a_monev='$a_monev', a_direk='$a_direk', a_pddikti='$a_pddikti', h_monev='$h_monev' WHERE id='$id'"; 
+    $sql="UPDATE detail_monev SET id_monev = '$id', a_monev='$a_monev', a_direk='$a_direk', a_pddikti='$a_pddikti', h_monev='$h_monev' WHERE id_monev='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";

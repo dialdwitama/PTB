@@ -41,7 +41,7 @@
                         Kembali ke Data Monev </a>
 
                         
-                        <a href="?page=peminjaman&actions=edit_detail_monev&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
+                        <a href="?page=edit&actions=detail_monev&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
 
