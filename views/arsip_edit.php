@@ -131,13 +131,13 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="progrep" class="col-sm-3 control-label">Progress Report</label>
                             <div class="col-sm-9">
-                                <input type="text" name="pemberi" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
+                                <input type="text" name="prog-rep" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">Person In Charge (PIC)</label>
                             <div class="col-sm-9">
-                                <input type="text" name="penerima" value="<?=$data['pic']?>" class="form-control" id="inputPassword3" placeholder="">
+                                <input type="text" name="pic" value="<?=$data['pic']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
