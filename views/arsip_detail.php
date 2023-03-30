@@ -36,7 +36,7 @@
                             <td>Status</td> <td><?= $data['stat'] ?></td>
                         </tr>
 						<tr>
-                            <td>Perhitungan</td> <td><?= $data['perhitungan'] ?></td>
+                            <td>Progress Report</td> <td><?= $data['progressReport'] ?></td>
                         </tr>
 						<tr>
                             <td>PIC</td> <td><?= $data['pic'] ?></td>
