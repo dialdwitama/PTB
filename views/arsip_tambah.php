@@ -46,9 +46,9 @@
                             </div>
                         </div>
 						 <div class="form-group">
-                            <label for="perhitungan" class="col-sm-3 control-label">Perhitungan</label>
+                            <label for="prog-report" class="col-sm-3 control-label">Progress Report</label>
                             <div class="col-sm-9">
-                                <input type="text" name="para_pihak" class="form-control" id="inputEmail3" placeholder="Silahkan Input Perhitungan Mundur (hari)" required>
+                                <input type="text" name="progreport" class="form-control" id="inputEmail3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
@@ -90,10 +90,10 @@ if($_POST){
   $tglProgressTerakhir=$_POST['tglProgressTerakhir'];
 	$deadline=$_POST['deadline'];
   $stat=$_POST['stat'];
-  $perhitungan=$_POST['perhitungan'];
+  $progreport=$_POST['progressReport'];
 	$pic=$_POST['pic'];
     //buat sql
-    $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$perhitungan','$pic')";
+    $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$progreport','$pic')";
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Arsip Error");
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
