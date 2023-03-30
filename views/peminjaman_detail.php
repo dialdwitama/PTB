@@ -17,7 +17,10 @@
 
                     <!--dalam tabel--->
                     <table class="table table-bordered table-striped table-hover"> 
-                    
+                        <tr>
+                            <td width="200">id</td> <td><?= $data['id'] ?></td>
+                        </tr>
+                        <tr>
                             <td>Alamat Monev</td> <td><?= $data['a_monev'] ?></td>
                         </tr>
                         <tr>

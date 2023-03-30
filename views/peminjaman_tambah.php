@@ -1,5 +1,3 @@
-
-
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
@@ -62,15 +60,14 @@
 <?php
 if($_POST){
     //Ambil data dari form
-    $noPerkara=$_POST['no_perkara'];
-	$peminjam=$_POST['peminjam'];
-	$tglPinjam=$_POST['tglPinjam'];
-    $ket=$_POST['ket'];
+    $no=$_POST['no'];   
+    $kode=$_POST['kode'];
+	$pt=$_POST['pt'];
+	$tglmonev=$_POST['tglmonev'];
+    $masalah=$_POST['masalah'];
     //buat sql
-    $sql="INSERT INTO peminjaman VALUES ('$noPerkara','$peminjam','$tglPinjam','Belum Kembali','','$ket','')";
-	$sqlArsip="UPDATE arsip SET status='Dipinjam' WHERE no_perkara='$nope'";
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Peminjaman Error");
-	$queryArsip=  mysqli_query($koneksi, $sqlArsip) or die ("SQL Simpan Arsip Error");
+    $sql="INSERT INTO monev VALUES ('$no','$kode','$pt','$tglmonev','$masalah')";
+    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
     }else{
