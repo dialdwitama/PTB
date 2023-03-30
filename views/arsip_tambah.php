@@ -15,7 +15,7 @@
                             </div>
                         </div>
 						 <div class="form-group">
-                            <label for="pt" class="col-sm-3 control-label">PTS</label>
+                            <label for="pt" class="col-sm-3 control-label">Nama PT</label>
                             <div class="col-sm-9">
                                 <input type="text" name="pt" class="form-control" id="inputEmail3" placeholder="Inputkan Nama PTS" required>
                             </div>

@@ -22,11 +22,11 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="pt" class="col-sm-3 control-label">Nama Perguruan Tinggi</label>
                             <div class="col-sm-9">
-                                <input type="text" name="pts" value="<?=$data['pt']?>"class="form-control" id="inputEmail3" placeholder="Nama Perguruan Tinggi" required>
+                                <input type="text" name="pt" value="<?=$data['pt']?>"class="form-control" id="inputEmail3" placeholder="Nama Perguruan Tinggi" required>
                             </div>
                         </div>
 						<div class="form-group">
-                            <label for="progress" class="col-sm-3 control-label">Progress Terrakhir</label>
+                            <label for="progress" class="col-sm-3 control-label">Progress Terakhir</label>
                             <div class="col-sm-9">
                                 <input type="text" name="progress" value="<?=$data['progressTerakhir']?>"class="form-control" id="inputEmail3" placeholder="Progress Terakhir">
                             </div>
