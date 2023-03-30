@@ -75,7 +75,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
 
 
-                            <label for="deadline" class="col-sm-3 control-label">Tanggal Progress Terakhir</label>
+                            <label for="deadline" class="col-sm-3 control-label">Deadline</label>
                             <!--untuk tahun-->
                             <div class="col-sm-2 col-xs-9">
                                 <select name="tahun" class="form-control">

@@ -21,7 +21,7 @@
                             <td width="200">Kode</td> <td><?= $data['kode'] ?></td>
                         </tr>
                         <tr>
-                            <td>PTS</td> <td><?= $data['pt'] ?></td>
+                            <td>Nama Perguruan Tinggi</td> <td><?= $data['pt'] ?></td>
                         </tr>
                         <tr>
                             <td>Progress Terakhir</td> <td><?= $data['progressTerakhir'] ?></td>
