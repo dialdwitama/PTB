@@ -14,7 +14,7 @@
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                                <th>No</th><th>Kode</th><th>PTS</th><th padding="30%">Progress Terakhir</th><th>Tanggal Progress Terakhir</th><th>Deadline</th><th>Status</th><th>Perhitungan</th><th>PIC</th>
+                                <th>No</th><th>Kode</th><th>PTS</th><th padding="30%">Progress Terakhir</th><th>Tanggal Progress Terakhir</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>PIC</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,7 +40,7 @@
                                     <td><?= $data['tglProgressTerakhir'] ?></td>
                                     <td><?= $data['deadline'] ?></td>
                                     <td><?= $data['stat'] ?></td>
-                                    <td><?= $data['perhitungan'] ?></td>
+                                    <td><?= $data['progressReport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                 </tr>
                                 <!--Tutup Perulangan data-->

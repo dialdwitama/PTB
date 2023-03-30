@@ -22,7 +22,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="pt" class="col-sm-3 control-label">Nama Perguruan Tinggi</label>
                             <div class="col-sm-9">
-                                <input type="text" name="pts" value="<?=$data['pt']?>"class="form-control" id="inputEmail3" placeholder="Nama Perguruan Tinggi">
+                                <input type="text" name="pts" value="<?=$data['pt']?>"class="form-control" id="inputEmail3" placeholder="Nama Perguruan Tinggi" required>
                             </div>
                         </div>
 						<div class="form-group">
@@ -40,7 +40,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="deadline" class="col-sm-3 control-label">Deadline</label>
                             <div class="col-sm-9">
-                                <input type="date" name="tgl" value="<?=$data['deadline']?>"class="form-control" id="inputEmail3">
+                                <input type="date" name="deadline" value="<?=$data['deadline']?>"class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         
@@ -49,6 +49,7 @@ $data= mysqli_fetch_array($ambil);
                             <label for="status" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
 								<select name="status" class="form-control">
+                                    <option value="pilih">----Pilih---</option>
 									<option value="Aman">Aman</option>
 									<option value="Menunggu Pergabungan">Menunggu Pergabungan</option>
 									<option value="Menunggu Pelaporan">Menunggu Pelaporan</option>
