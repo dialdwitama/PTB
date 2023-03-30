@@ -34,7 +34,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="progress" class="col-sm-3 control-label">Tanggal Progress</label>
                             <div class="col-sm-9">
-                                <input type="date" name="tgl" value="<?=$data['tglProgressTerakhir']?>"class="form-control" id="inputEmail3">
+                                <input type="date" name="tgl" value="<?=$data['tgl']?>"class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group">
@@ -100,13 +100,13 @@ if($_POST){
     $kode=$_POST['kode'];
     $pt=$_POST['pt'];
 	$progress=$_POST['progressTerakhir'];
-    $tgl=$_POST['tglProgressTerakhir'];
+    $tgl=$_POST['tgl'];
 	$deadline=$_POST['deadline'];
     $status=$_POST['stat'];
     $progrep=$_POST['progressReport'];
 	$pic=$_POST['pic'];
     //buat sql
-    $sql="UPDATE pts SET kode='$kode',pt='$pt',progressTerakhir='$progress',tglProgressTerakhir='$tgl',deadline='$deadline',
+    $sql="UPDATE pts SET kode='$kode',pt='$pt',progressTerakhir='$progress',tgl='$tgl',deadline='$deadline',
 	stat='$status',progressReport='$progrep',pic='$pic' WHERE id ='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     }

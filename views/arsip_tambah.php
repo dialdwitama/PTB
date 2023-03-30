@@ -43,6 +43,7 @@
                             <label for="status" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
 								<select name="status" class="form-control">
+                                    <option value="pilih">----Pilih----</option>
 									<option value="Aman">Aman</option>
 									<option value="Menunggu Pergabungan">Menunggu Pergabungan</option>
 									<option value="Menunggu Pelaporan">Menunggu Pelaporan</option>
@@ -64,7 +65,6 @@
                                 <input type="text" name="pic" class="form-control" id="inputEmail3" placeholder="Silahkan Input PIC" required>
                             </div>
                         </div>
-                        <!--Akhir Status-->
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
@@ -94,13 +94,13 @@ if($_POST){
 	$kode=$_POST['kode'];
 	$pt=$_POST['pt'];
 	$progressTerakhir=$_POST['progressTerakhir'];
-  $tglProgressTerakhir=$_POST['tglProgressTerakhir'];
+  $tgl=$_POST['tgl'];
 	$deadline=$_POST['deadline'];
   $stat=$_POST['stat'];
   $progreport=$_POST['progressReport'];
 	$pic=$_POST['pic'];
     //buat sql
-    $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$progreport','$pic')";
+    $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tgl','$deadline','$stat','$progreport','$pic')";
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";

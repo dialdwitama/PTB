@@ -27,7 +27,7 @@
                             <td>Progress Terakhir</td> <td><?= $data['progressTerakhir'] ?></td>
                         </tr>
 						<tr>
-                            <td>Tanggal Progress Terakhir</td> <td><?= $data['tglProgressTerakhir'] ?></td>
+                            <td>Tanggal Progress Terakhir</td> <td><?= $data['tgl'] ?></td>
                         </tr>
                         <tr>
                             <td>Deadline</td> <td><?= $data['deadline'] ?></td>

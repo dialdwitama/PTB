@@ -38,7 +38,7 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['kode'] ?></td>
                                     <td><?= $data['pt'] ?></td>
                                     <td><?= $data['progressTerakhir'] ?></td>
-                                    <td><?= $data['tglProgressTerakhir'] ?></td>
+                                    <td><?= $data['tgl'] ?></td>
                                     <td><?= $data['deadline'] ?></td>
                                     <td><?= $data['stat'] ?></td>
                                     <td><?= $data['progressReport'] ?></td>
