@@ -23,7 +23,13 @@
 						 <div class="form-group">
                             <label for="progressTerakhir" class="col-sm-3 control-label">Progress Terakhir</label>
                             <div class="col-sm-9">
-                                <input type="date" name="progressTerakhir" class="form-control" id="inputEmail3" placeholder="" required>
+                                <input type="text" name="progressTerakhir" class="form-control" id="inputEmail3" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="deadline" class="col-sm-3 control-label">Tanggal Progress Terakhir</label>
+                            <div class="col-sm-9">
+                                <input type="date" name="deadline" class="form-control" id="inputEmail3" placeholder="" required>
                             </div>
                         </div>
 						 <div class="form-group">
