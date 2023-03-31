@@ -1,5 +1,10 @@
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<style type="text/css">
+    .background{
+        background-color: #1E90FF !important;
+    }
+</style>
+<nav style="background: #1E90FF" class="navbar navbar-inverse navbar-fixed-top">
 
     <div class="container">
         <div class="navbar-header">
@@ -7,14 +12,14 @@
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+                <span  class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="?page=utama">Sistem Informasi PTB LLDIKTI4</a>
+            <a style="background: #1E90FF" class="navbar-brand" href="?page=utama">Sistem Informasi PTB LLDIKTI4</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+        <div style="background: #1E90FF" id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" style="background: #1E90FF">
+                <li class="active"><a href="#" style="background: #1E90FF">Home</a></li>
 
                 <?php if(isset($_SESSION['level']) && $_SESSION['level']==1) { ?>
                 <li class="dropdown">
