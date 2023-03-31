@@ -7,7 +7,7 @@ $data= mysqli_fetch_array($ambil);
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div class="panel-heading">
+                <div style="background: #1E90FF" class="panel-heading">
                     <h3 class="panel-title">Update Detail Monev PT</h3>
                 </div>
                 <div class="panel-body">
@@ -34,6 +34,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="h_monev" class="col-sm-3 control-label">Hasil Monev</label>
                             <div class="col-sm-9">
+                            <input type="text" name="h_monev" value="<?=$data['h_monev']?>" class="form-control" id="inputPassword3" placeholder="Input Hasil Monev">
                          <?php
                             // deklarasi variabel teks
                             $teks = "";
@@ -44,7 +45,7 @@ $data= mysqli_fetch_array($ambil);
                     </form>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success">
+                                <button style="background: #1E90FF" type="submit">
                                     <span class="fa fa-edit"></span> Update Data Monev PT</button>
                             </div>
                         </div>
@@ -53,7 +54,7 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=detail_monev&actions=edit" class="btn btn-danger btn-sm">
+                    <a href="?page=peminjaman&actions=detail&id=1" class="btn btn-danger btn-sm">
                         Kembali Ke Data Monev PT
                     </a>
                 </div>
