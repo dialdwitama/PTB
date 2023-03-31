@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div class="panel-heading">
+                <div class="panel-heading" style="background: #1E90FF">
                     <h3 class="panel-title">Form Tambah Data PTB</h3>
                 </div>
                 <div class="panel-body">
@@ -29,13 +29,13 @@
                         <div class="form-group">
                             <label for="tgl" class="col-sm-3 control-label">Tanggal Progress Terakhir</label>
                             <div class="col-sm-9">
-                                <input type="date" name="tgl" class="form-control" id="inputEmail3" placeholder="" required>
+                                <input type="date" name="tgl" class="form-control" id="inputEmail3" placeholder="">
                             </div>
                         </div>
 						 <div class="form-group">
                             <label for="deadline" class="col-sm-3 control-label">Deadline</label>
                             <div class="col-sm-9">
-                                <input type="date" name="deadline" class="form-control" id="inputEmail3" placeholder="" required>
+                                <input type="date" name="deadline" class="form-control" id="inputEmail3" placeholder="">
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-success" style="background: #1E90FF">
                                     <span class="fa fa-save"></span> Simpan Data</button>
                             </div>
                         </div>

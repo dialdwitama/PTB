@@ -7,7 +7,7 @@ $data= mysqli_fetch_array($ambil);
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div class="panel-heading">
+                <div class="panel-heading" style="background: #1E90FF">
                     <h3 class="panel-title">Form Update Data PTB</h3>
                 </div>
                 <div class="panel-body">
@@ -75,7 +75,7 @@ $data= mysqli_fetch_array($ambil);
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success" name="submit">
+                                <button type="submit" class="btn btn-success" name="submit" style="background: #1E90FF">
                                     <span class="fa fa-edit"></span> Update Data PTB</button>
                             </div>
                         </div>

@@ -15,7 +15,7 @@ if(!isset($_SESSION ['idsesi'])) {
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                            <th>No</th><th>Kode</th><th>Nama Perguruan Tinggi</th><th padding="50%">Progress Terakhir</th><th>Tanggal Progress</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>Person In Charge(PIC)</th><th>ACTIONS</th>
+                            <th>No</th><th>Kode</th><th>Nama Perguruan Tinggi</th><th padding="30%">Progress Terakhir</th><th>Tanggal Progress</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>Person In Charge(PIC)</th><th>ACTIONS</th>
                             </tr>
                         </thead>
                         <tbody>
