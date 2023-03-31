@@ -41,7 +41,7 @@ $data= mysqli_fetch_array($ambil);
                         <textarea id="teks" name="teks" rows="5" cols="30" class="form-control"><?php echo $teks; ?></textarea>
                             </div>
                         </div>
-        </form>
+                    </form>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
                                 <button type="submit" class="btn btn-success">
