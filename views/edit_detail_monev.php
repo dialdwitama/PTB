@@ -1,5 +1,5 @@
 <?php
-$id=$_GET['id_monev'];
+$id=$_GET['id'];
 $ambil=  mysqli_query($koneksi, "SELECT * FROM detail_monev WHERE id_monev='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
