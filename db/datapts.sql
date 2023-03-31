@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 31 Mar 2023 pada 04.54
+-- Waktu pembuatan: 31 Mar 2023 pada 05.00
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -484,6 +484,119 @@ INSERT INTO `datapts` (`id`, `kode`, `pt`) VALUES
 (444, '046004', 'Akademi Komunitas Insan Tazakka'),
 (445, '046005', 'Akademi Komunitas Qurrota Ayun');
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `detail_lampiran`
+--
+
+CREATE TABLE `detail_lampiran` (
+  `id_lampiran` int(100) NOT NULL,
+  `surat` varchar(150) NOT NULL,
+  `berita_acara` varchar(150) NOT NULL,
+  `foto` varchar(150) NOT NULL,
+  `absensi` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `detail_ptb`
+--
+
+CREATE TABLE `detail_ptb` (
+  `id` int(10) NOT NULL,
+  `tgl` date NOT NULL,
+  `permintaan` varchar(255) NOT NULL,
+  `kegiatan` varchar(255) NOT NULL,
+  `hasil_keg` varchar(255) NOT NULL,
+  `lampiran` varchar(50) NOT NULL,
+  `ket` varchar(150) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `detail_ptb`
+--
+
+INSERT INTO `detail_ptb` (`id`, `tgl`, `permintaan`, `kegiatan`, `hasil_keg`, `lampiran`, `ket`) VALUES
+(1, '2022-04-12', 'Mengajukan pembukaan tipe 1 ke LLDIKTI', '', '', '', 'Penolakan tipe 1 karena berkas tidak lengkap'),
+(2, '2022-10-05', '', 'Monitoring dan evaluasi perguruan tinggi', 'Lahan yang ditempati saat ini bergabung dengan STKIP Situs Banten', '', 'Akan segera bergabung dengan STKIP Situs Banten serta pengajuan tutup pada program studi yang pembinaan');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `monev`
+--
+
+CREATE TABLE `monev` (
+  `no` int(5) NOT NULL,
+  `perguruants` varchar(50) NOT NULL,
+  `badanPenyelenggara` varchar(50) NOT NULL,
+  `alpddikti` varchar(100) NOT NULL,
+  `aldirektori` varchar(100) NOT NULL,
+  `almonev` varchar(100) NOT NULL,
+  `hasilMonev` varchar(100) NOT NULL,
+  `id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `monev`
+--
+
+INSERT INTO `monev` (`no`, `perguruants`, `badanPenyelenggara`, `alpddikti`, `aldirektori`, `almonev`, `hasilMonev`, `id`) VALUES
+(1, 'Politeknik Maritim Eka Subang', 'Yayasan Pendidikan Eka Utama', 'Kab. Subang - Prov. Jawa Barat - Indonesia', 'Kabupaten Subang - Jawa Barat', 'Jl. Kapten Hanafiah No.45, Kel.Karanganyar, Kec.Subang, Kab.Subang, Jawa Barat`, `1. Lahan Perpustak', '1. Lahan Perpustakaan seluas 32,5 M2 (belum memenuhi)\r\n2. Judul buku sebanyak 136 (belum memenuhi)\r\n', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pts`
+--
+
+CREATE TABLE `pts` (
+  `id` int(5) NOT NULL,
+  `kode` int(25) NOT NULL,
+  `pt` varchar(100) NOT NULL,
+  `progressTerakhir` varchar(150) NOT NULL,
+  `tgl` date NOT NULL,
+  `deadline` date NOT NULL,
+  `stat` varchar(50) NOT NULL,
+  `progressReport` varchar(150) NOT NULL,
+  `pic` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `pts`
+--
+
+INSERT INTO `pts` (`id`, `kode`, `pt`, `progressTerakhir`, `tgl`, `deadline`, `stat`, `progressReport`, `pic`) VALUES
+(13, 12365, '', '', '2023-03-02', '2023-03-30', '', '', 'LLDIKTI'),
+(14, 12222, '', '', '0000-00-00', '0000-00-00', '', '', 'LLDIKTI'),
+(15, 12224, 'UNIKOM', '', '0000-00-00', '2023-04-08', '', '', 'LLDIKTI4'),
+(16, 24533, 'STTB', 'syahsjkadksndnfn', '0000-00-00', '2023-03-10', '', '', 'LLDIKTI4'),
+(17, 3456, 'Sekolah Tinggi Teknologi Bandung', '', '0000-00-00', '2023-03-31', '', '', 'LLDIKTI4');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(25) NOT NULL,
+  `paswd` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nama` varchar(50) NOT NULL,
+  `level` int(1) NOT NULL,
+  `ket` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`username`, `paswd`, `email`, `nama`, `level`, `ket`) VALUES
+('admin', '21232f297a57a5a743894a0e4a801fc3', 'kl@gmail.com', 'LLDIKTI4 Kelembagaan', 1, 'LLDIKTI');
+
 --
 -- Indexes for dumped tables
 --
@@ -495,6 +608,36 @@ ALTER TABLE `datapts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `detail_lampiran`
+--
+ALTER TABLE `detail_lampiran`
+  ADD PRIMARY KEY (`id_lampiran`);
+
+--
+-- Indeks untuk tabel `detail_ptb`
+--
+ALTER TABLE `detail_ptb`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `monev`
+--
+ALTER TABLE `monev`
+  ADD PRIMARY KEY (`no`);
+
+--
+-- Indeks untuk tabel `pts`
+--
+ALTER TABLE `pts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
+
+--
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -503,6 +646,30 @@ ALTER TABLE `datapts`
 --
 ALTER TABLE `datapts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=446;
+
+--
+-- AUTO_INCREMENT untuk tabel `detail_lampiran`
+--
+ALTER TABLE `detail_lampiran`
+  MODIFY `id_lampiran` int(100) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `detail_ptb`
+--
+ALTER TABLE `detail_ptb`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `monev`
+--
+ALTER TABLE `monev`
+  MODIFY `no` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT untuk tabel `pts`
+--
+ALTER TABLE `pts`
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
