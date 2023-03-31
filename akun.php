@@ -1,4 +1,9 @@
 <!-- Fixed navbar -->
+<style type="text/css">
+    .background{
+        background-color: #1E90FF !important;
+    }
+</style>
   <div class="container">
         <div class="navbar-header-">
               <?php if (isset($_SESSION['username'])) { ?>

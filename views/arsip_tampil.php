@@ -8,14 +8,14 @@ if(!isset($_SESSION ['idsesi'])) {
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div class="panel-heading">
+                <div style="background: #1E90FF" class="panel-heading">
                     <h3 class="panel-title"><span class="fa fa-user-plus"></span> Data PTS Bermasalah</h3>
                 </div>
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                            <th>No</th><th>Kode</th><th>PTS</th><th padding="30%">Progress Terakhir</th><th>Tanggal Progress Terakhir</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>PIC</th>
+                            <th>No</th><th>Kode</th><th>Nama Perguruan Tinggi</th><th padding="50%">Progress Terakhir</th><th>Tanggal Progress</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>Person In Charge(PIC)</th><th>ACTIONS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,10 +38,10 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['kode'] ?></td>
                                     <td><?= $data['pt'] ?></td>
                                     <td><?= $data['progressTerakhir'] ?></td>
-                                    <td><?= $data['tglProgressTerakhir'] ?></td>
+                                    <td><?= $data['tgl'] ?></td>
                                     <td><?= $data['deadline'] ?></td>
                                     <td><?= $data['stat'] ?></td>
-                                    <td><?= $data['progreport'] ?></td>
+                                    <td><?= $data['progressReport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                     <td>
                                         <a href="?page=edit&actions=detail_ptb&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
@@ -50,8 +50,6 @@ if(!isset($_SESSION ['idsesi'])) {
                                         <a href="?page=arsip&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-										<a href="?page=peminjaman&actions=tambah&nope=<?= $data['kode'] ?>" class="btn btn-info btn-xs">
-											<span class="fa fa-arrow-right"></span>
 										</a>
                                         <a href="?page=arsip&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
