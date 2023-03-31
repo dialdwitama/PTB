@@ -61,7 +61,8 @@
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">PIC</label>
                             <div class="col-sm-9">
-                                <input type="text" name="pic" class="form-control" id="inputEmail3" placeholder="Silahkan Input PIC" required>
+                            <select name="status" class="form-control">
+                                    <option value="pilih">LLDIKTI</option></select>
                             </div>
                         </div>
 
@@ -89,17 +90,16 @@
 <?php
 if($_POST){
     //Ambil data dari form
-  $id=$_POST['id'];
 	$kode=$_POST['kode'];
 	$pt=$_POST['pt'];
 	$progressTerakhir=$_POST['progressTerakhir'];
-  $tgl=$_POST['tgl'];
+    $tglProgressTerakhir=$_POST['tglProgressTerakhir'];
 	$deadline=$_POST['deadline'];
-  $stat=$_POST['stat'];
-  $progreport=$_POST['progressReport'];
+    $stat=$_POST['stat'];
+  $progreport=$_POST['progreport'];
 	$pic=$_POST['pic'];
     //buat sql
-    $sql="INSERT INTO pts VALUES ('$id','$kode','$pt','$progressTerakhir','$tgl','$deadline','$stat','$progreport','$pic')";
+    $sql="INSERT INTO pts VALUES ('$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$progreport','$pic')";
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";

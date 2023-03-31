@@ -27,7 +27,7 @@
                             <td>Progress Terakhir</td> <td><?= $data['progressTerakhir'] ?></td>
                         </tr>
 						<tr>
-                            <td>Tanggal Progress Terakhir</td> <td><?= $data['tgl'] ?></td>
+                            <td>Tanggal Progress Terakhir</td> <td><?= $data['tglProgressTerakhir'] ?></td>
                         </tr>
                         <tr>
                             <td>Deadline</td> <td><?= $data['deadline'] ?></td>
@@ -36,7 +36,7 @@
                             <td>Status</td> <td><?= $data['stat'] ?></td>
                         </tr>
 						<tr>
-                            <td>Progress Report</td> <td><?= $data['progressReport'] ?></td>
+                            <td>Progress Report</td> <td><?= $data['progreport'] ?></td>
                         </tr>
 						<tr>
                             <td>PIC</td> <td><?= $data['pic'] ?></td>

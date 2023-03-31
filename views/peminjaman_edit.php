@@ -40,9 +40,9 @@ $data= mysqli_fetch_array($ambil);
                   <div class="col-sm-9">
                 <?php
                     // deklarasi variabel teks
-                    $teks = "";
+                    $masalah = "";
                 ?>
-                <textarea id="teks" name="teks" rows="5" cols="30" class="form-control"><?php echo $teks; ?></textarea>
+                <textarea id="teks" name="masalah" rows="5" cols="106" value="<?=$data['masalah']?> class="form-control"></textarea>
         </div>
     </form>
 

@@ -37,10 +37,10 @@
                                     <td><?= $data['kode'] ?></td>
                                     <td><?= $data['pt'] ?></td>
                                     <td><?= $data['progressTerakhir'] ?></td>
-                                    <td><?= $data['tgl'] ?></td>
+                                    <td><?= $data['tglProgressTerakhir'] ?></td>
                                     <td><?= $data['deadline'] ?></td>
                                     <td><?= $data['stat'] ?></td>
-                                    <td><?= $data['progressReport'] ?></td>
+                                    <td><?= $data['progreport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                 </tr>
                                 <!--Tutup Perulangan data-->
