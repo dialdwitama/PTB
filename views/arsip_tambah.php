@@ -27,9 +27,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="deadline" class="col-sm-3 control-label">Tanggal Progress Terakhir</label>
+                            <label for="tgl" class="col-sm-3 control-label">Tanggal Progress Terakhir</label>
                             <div class="col-sm-9">
-                                <input type="date" name="deadline" class="form-control" id="inputEmail3" placeholder="" required>
+                                <input type="date" name="tgl" class="form-control" id="inputEmail3" placeholder="" required>
                             </div>
                         </div>
 						 <div class="form-group">
@@ -40,9 +40,10 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="status" class="col-sm-3 control-label">Status</label>
+                            <label for="stat" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
-								<select name="status" class="form-control">
+								<select name="stat" class="form-control">
+                                    <option value="">---Pilih---</option>
 									<option value="Aman">Aman</option>
 									<option value="Menunggu Pergabungan">Menunggu Pergabungan</option>
 									<option value="Menunggu Pelaporan">Menunggu Pelaporan</option>
@@ -53,16 +54,17 @@
                             </div>
                         </div>
 						 <div class="form-group">
-                            <label for="prog-report" class="col-sm-3 control-label">Progress Report</label>
+                            <label for="progressReport" class="col-sm-3 control-label">Progress Report</label>
                             <div class="col-sm-9">
-                                <input type="text" name="progreport" class="form-control" id="inputEmail3" placeholder="">
+                                <input type="text" name="progressReport" class="form-control" id="inputEmail3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">PIC</label>
                             <div class="col-sm-9">
-                            <select name="status" class="form-control">
-                                    <option value="pilih">LLDIKTI</option></select>
+                            <select name="pic" class="form-control">
+                                <option value="">---Pilih---</option>
+                                <option value="LLDIKTI 4">LLDIKTI 4</option></select>
                             </div>
                         </div>
 
@@ -93,19 +95,20 @@ if($_POST){
 	$kode=$_POST['kode'];
 	$pt=$_POST['pt'];
 	$progressTerakhir=$_POST['progressTerakhir'];
-    $tglProgressTerakhir=$_POST['tglProgressTerakhir'];
+    $tgl=$_POST['tgl'];
 	$deadline=$_POST['deadline'];
     $stat=$_POST['stat'];
-  $progreport=$_POST['progreport'];
+  $progressReport=$_POST['progressReport'];
 	$pic=$_POST['pic'];
     //buat sql
-    $sql="INSERT INTO pts VALUES ('$kode','$pt','$progressTerakhir','$tglProgressTerakhir','$deadline','$stat','$progreport','$pic')";
+    $sql="INSERT INTO pts VALUES ('','$kode','$pt','$progressTerakhir','$tgl','$deadline','$stat','$progressReport','$pic')";
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
+    }
     if ($query){
         echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
     }else{
         echo "<script>alert('Simpan Data Gagal');<script>";
     }
-    }
+    
 
 ?>
