@@ -32,9 +32,9 @@ $data= mysqli_fetch_array($ambil);
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="progress" class="col-sm-3 control-label">Tanggal Progress</label>
+                            <label for="tgl" class="col-sm-3 control-label">Tanggal Progress</label>
                             <div class="col-sm-9">
-                                <input type="date" name="tgl" value="<?=$data['tglProgressTerakhir']?>"class="form-control" id="inputEmail3">
+                                <input type="date" name="tgl" value="<?=$data['tgl']?>"class="form-control" id="inputEmail3">
                             </div>
                         </div>
                         <div class="form-group">
@@ -63,7 +63,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="progrep" class="col-sm-3 control-label">Progress Report</label>
                             <div class="col-sm-9">
-                                <input type="text" name="prog-rep" value="<?=$data['progreport']?>" class="form-control" id="inputPassword3" placeholder="">
+                                <input type="text" name="prog-rep" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
@@ -98,14 +98,14 @@ if($_POST){
     //Ambil data dari form
     $kode=$_POST['kode'];
     $pt=$_POST['pt'];
-	$progressTerakhir=$_POST['progressTerakhir'];
-    $tglProgressTerakhir=$_POST['tglProgressTerakhir'];
+	$progress=$_POST['progressTerakhir'];
+    $tgl=$_POST['tgl'];
 	$deadline=$_POST['deadline'];
     $status=$_POST['stat'];
-    $progreport=$_POST['progreport'];
+    $progrep=$_POST['progreport'];
 	$pic=$_POST['pic'];
     //buat sql
-    $sql="UPDATE pts SET kode='$kode',pt='$pt',progressTerakhir='$progress',tglProgressTerakhir='$tglProgressTerakhir',deadline='$deadline',
+    $sql="UPDATE pts SET kode='$kode',pt='$pt',progressTerakhir='$progress',tgl='$tgl',deadline='$deadline',
 	stat='$status',progressReport='$progrep',pic='$pic' WHERE id ='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     }
