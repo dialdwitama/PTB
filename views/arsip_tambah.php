@@ -2,7 +2,11 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
+<<<<<<< HEAD
                 <div class="panel-heading" style="background: #1E90FF">
+=======
+                <div style="background: #1E90FF" class="panel-heading">
+>>>>>>> 2676c454e659249ff0cf63ba8a0f97355b6f7e35
                     <h3 class="panel-title">Form Tambah Data PTB</h3>
                 </div>
                 <div class="panel-body">
