@@ -30,7 +30,7 @@
                             <td>Hasil Monev </td> <td><?= $data['h_monev'] ?></td>
                         </tr>
                     </table>
-                    
+
                 </div> <!--end panel-body-->
                 <!--panel footer--> 
                 <div class="panel-footer">
