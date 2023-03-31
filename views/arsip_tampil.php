@@ -38,10 +38,10 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['kode'] ?></td>
                                     <td><?= $data['pt'] ?></td>
                                     <td><?= $data['progressTerakhir'] ?></td>
-                                    <td><?= $data['tgl'] ?></td>
+                                    <td><?= $data['tglProgressTerakhir'] ?></td>
                                     <td><?= $data['deadline'] ?></td>
                                     <td><?= $data['stat'] ?></td>
-                                    <td><?= $data['progressReport'] ?></td>
+                                    <td><?= $data['progreport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                     <td>
                                         <a href="?page=arsip&actions=detail&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
