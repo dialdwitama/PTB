@@ -4,6 +4,11 @@
 require 'config/koneksi.php'; ?>
 <!DOCTYPE html>
 
+<style type="text/css">
+    .background{
+        background-color: #1E90FF !important;
+    }
+</style>
 <html>
     <head>
         <meta charset="UTF-8">

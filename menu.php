@@ -23,7 +23,7 @@
 
                 <?php if(isset($_SESSION['level']) && $_SESSION['level']==1) { ?>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kelola Data <span class="caret"></span></a>
+                    <a style="background: #1E90FF" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kelola Data <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="?page=arsip&actions=tampil">PTS Bermasalah</a></li>
                         <li><a href="?page=peminjaman&actions=tampil">Rekapitulasi Monev</a></li>
