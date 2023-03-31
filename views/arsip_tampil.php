@@ -15,7 +15,7 @@ if(!isset($_SESSION ['idsesi'])) {
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
-                            <th>No</th><th>Kode</th><th>PTS</th><th padding="30%">Progress Terakhir</th><th>Tanggal Progress Terakhir</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>PIC</th><th>AKSI</th>
+                            <th>No</th><th>Kode</th><th>Nama Perguruan Tinggi</th><th padding="50%">Progress Terakhir</th><th>Tanggal Progress</th><th>Deadline</th><th>Status</th><th>Progress Report</th><th>Person In Charge(PIC)</th><th>ACTIONS</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -50,8 +50,6 @@ if(!isset($_SESSION ['idsesi'])) {
                                         <a href="?page=arsip&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-										<a href="?page=peminjaman&actions=tambah&nope=<?= $data['kode'] ?>" class="btn btn-info btn-xs">
-											<span class="fa fa-arrow-right"></span>
 										</a>
                                         <a href="?page=arsip&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>

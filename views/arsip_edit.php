@@ -26,9 +26,9 @@ $data= mysqli_fetch_array($ambil);
                             </div>
                         </div>
 						<div class="form-group">
-                            <label for="progress" class="col-sm-3 control-label">Progress Terakhir</label>
+                            <label for="progressTerakhir" class="col-sm-3 control-label">Progress Terakhir</label>
                             <div class="col-sm-9">
-                                <input type="text" name="progress" value="<?=$data['progressTerakhir']?>"class="form-control" id="inputEmail3" placeholder="Progress Terakhir">
+                                <input type="text" name="progressTerakhir" value="<?=$data['progressTerakhir']?>"class="form-control" id="inputEmail3" placeholder="Progress Terakhir">
                             </div>
                         </div>
                         <div class="form-group">
@@ -46,9 +46,9 @@ $data= mysqli_fetch_array($ambil);
                         
                         <!--Status-->
                         <div class="form-group">
-                            <label for="status" class="col-sm-3 control-label">Status</label>
+                            <label for="stat" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
-								<select name="status" class="form-control">
+								<select name="stat" class="form-control">
 									<option value="Aman">Aman</option>
 									<option value="Menunggu Pergabungan">Menunggu Pergabungan</option>
 									<option value="Menunggu Pelaporan">Menunggu Pelaporan</option>
@@ -60,15 +60,17 @@ $data= mysqli_fetch_array($ambil);
                         </div>
                         <!--Akhir Status-->
                         <div class="form-group">
-                            <label for="progrep" class="col-sm-3 control-label">Progress Report</label>
+                            <label for="progressReport" class="col-sm-3 control-label">Progress Report</label>
                             <div class="col-sm-9">
-                                <input type="text" name="prog-rep" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
+                                <input type="text" name="progressReport" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">Person In Charge (PIC)</label>
                             <div class="col-sm-9">
-                                <input type="text" name="pic" value="<?=$data['pic']?>" class="form-control" id="inputPassword3" placeholder="">
+                            <select name="pic" class="form-control">
+                                <option value="">---Pilih---</option>
+                                <option value="LLDIKTI 4">LLDIKTI 4</option></select>
                             </div>
                         </div>
                         <div class="form-group">
@@ -97,14 +99,14 @@ if($_POST){
     //Ambil data dari form
     $kode=$_POST['kode'];
     $pt=$_POST['pt'];
-	$progress=$_POST['progressTerakhir'];
+	$progressTerakhir=$_POST['progressTerakhir'];
     $tgl=$_POST['tgl'];
 	$deadline=$_POST['deadline'];
-    $status=$_POST['stat'];
-    $progrep=$_POST['progreport'];
+    $stat=$_POST['stat'];
+    $progressReport=$_POST['progressReport'];
 	$pic=$_POST['pic'];
     //buat sql 
-    $sql="UPDATE pts SET kode='$kode', pt='$pt', progressTerakhir='$progress', tgl='$tgl', deadline='$deadline', stat='$status', progressReport='$progrep', pic='$pic' WHERE id ='$id'"; 
+    $sql="UPDATE pts SET kode='$kode', pt='$pt', progressTerakhir='$progressTerakhir', tgl='$tgl', deadline='$deadline', stat='$stat', progressReport='$progressReport', pic='$pic' WHERE id ='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     }
     
