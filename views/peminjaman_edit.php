@@ -1,5 +1,5 @@
 <?php
-$id=$_GET['id'];
+$id=$_GET['no'];
 $ambil=  mysqli_query($koneksi, "SELECT * FROM monev WHERE no='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
@@ -72,7 +72,7 @@ if($_POST){
 	$tglmonev=$_POST['tglmonev'];
     $masalah=$_POST['masalah'];
     //buat sql
-    $sql="UPDATE monev SET kode='$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE id='$id'"; 
+    $sql="UPDATE monev SET kode='$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE no='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
