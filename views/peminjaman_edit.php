@@ -31,18 +31,14 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="tglmonev" class="col-sm-3 control-label">Tanggal Monev</label>
                             <div class="col-sm-9">
-                                <input type="date" name="tglmonev" value="<?=$data['tglmonev']?>"class="form-control" id="inputEmail3">
+                                <input type="date" name="tglmonev" value="<?=$data['tglmonev']?>"class="form-control" id="inputEmail3" placeholder="">
                             </div>
                         </div>
              
                   <div class="form-group">
                   <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
                   <div class="col-sm-9">
-                <?php
-                    // deklarasi variabel teks
-                    $masalah = "";
-                ?>
-                <textarea id="teks" name="masalah" rows="5" cols="106" value="<?=$data['masalah']?> class="form-control"></textarea>
+                  <input type="text" name="masalah" value="<?=$data['masalah']?>"class="form-control" id="inputEmail3">
         </div>
     </form>
 
@@ -76,7 +72,7 @@ if($_POST){
 	$tglmonev=$_POST['tglmonev'];
     $masalah=$_POST['masalah'];
     //buat sql
-    $sql="UPDATE monev SET kode = '$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE id='$id'"; 
+    $sql="UPDATE monev SET kode='$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE id='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
