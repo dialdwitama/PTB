@@ -1,3 +1,8 @@
+<style type="text/css">
+    .background{
+        background-color: #1E90FF !important;
+    }
+</style>
 <div class="container">
     <div class="row">
         <div class ="col-xs-12">
@@ -66,10 +71,11 @@
            } else { ?>
 
             <div class="panel panel-success">
-                <div class="panel-heading">
+                <div style="background-color: #1E90FF" class="panel-heading">
                     <h3 class="panel-title">Masuk Ke Sistem</h3>
                 </div>
                 <div class="panel-body">
+                    
                     <form class="form-horizontal" action="proses_login.php" method="post">
                         <div class="form-group">
                             <div class="col-sm-12">
@@ -85,9 +91,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-sm-12">
+                            <div style="background-color: #1E90FF"  class="col-sm-12">
                                 <button type="submit" name="login" value="login"
-                                        class="btn btn-success btn-block"><span class="fa fa-unlock-alt"></span>
+                                        class="background"><span class="fa fa-unlock-alt"></span>
                                     Login Sistem
                                 </button>
                             </div>

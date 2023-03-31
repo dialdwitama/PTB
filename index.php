@@ -4,9 +4,15 @@
 require 'config/koneksi.php'; ?>
 <!DOCTYPE html>
 
+<style type="text/css">
+    .background{
+        background-color: #1E90FF !important;
+    }
+</style>
 <html>
     <head>
         <meta charset="UTF-8">
+        <link rel="icon" href="img/kemdikbud.png">
         <title>SI PTB</title>
         <link href="Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="Assets/css/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
