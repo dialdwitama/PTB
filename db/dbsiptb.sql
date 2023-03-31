@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2023 at 06:35 AM
+-- Generation Time: Mar 31, 2023 at 07:51 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -513,6 +513,13 @@ CREATE TABLE `detail_monev` (
   `id` int(7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `detail_monev`
+--
+
+INSERT INTO `detail_monev` (`id_monev`, `a_monev`, `a_direk`, `a_pddikti`, `h_monev`, `id`) VALUES
+(1, 'Jl.PHH.Mustafa no.39', '99', 'Jl.Suci no.38', 'Lahan Perpustakaan Seluas 32,5 M2 (belum memenuhi)Judul buku sebanyak 136 (belum memenuhi)Permasalahan di SAPTO terkait pengajuan akreditasi prodi baru', 13);
+
 -- --------------------------------------------------------
 
 --
@@ -545,21 +552,19 @@ INSERT INTO `detail_ptb` (`id`, `tgl`, `permintaan`, `kegiatan`, `hasil_keg`, `l
 
 CREATE TABLE `monev` (
   `no` int(5) NOT NULL,
-  `perguruants` varchar(50) NOT NULL,
-  `badanPenyelenggara` varchar(50) NOT NULL,
-  `alpddikti` varchar(100) NOT NULL,
-  `aldirektori` varchar(100) NOT NULL,
-  `almonev` varchar(100) NOT NULL,
-  `hasilMonev` varchar(100) NOT NULL,
-  `id` int(5) NOT NULL
+  `kode` int(10) NOT NULL,
+  `pt` varchar(100) NOT NULL,
+  `tglmonev` date DEFAULT NULL,
+  `masalah` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `monev`
 --
 
-INSERT INTO `monev` (`no`, `perguruants`, `badanPenyelenggara`, `alpddikti`, `aldirektori`, `almonev`, `hasilMonev`, `id`) VALUES
-(1, 'Politeknik Maritim Eka Subang', 'Yayasan Pendidikan Eka Utama', 'Kab. Subang - Prov. Jawa Barat - Indonesia', 'Kabupaten Subang - Jawa Barat', 'Jl. Kapten Hanafiah No.45, Kel.Karanganyar, Kec.Subang, Kab.Subang, Jawa Barat`, `1. Lahan Perpustak', '1. Lahan Perpustakaan seluas 32,5 M2 (belum memenuhi)\r\n2. Judul buku sebanyak 136 (belum memenuhi)\r\n', 1);
+INSERT INTO `monev` (`no`, `kode`, `pt`, `tglmonev`, `masalah`) VALUES
+(1, 12121, 'Universitas Widyatama', '2023-03-08', '1.Lahan Perpustakaan Seluas 84 M2 (belum memenuhi)\r\n2.Judul buku sebanyak 162 (belum memenuhi)\r\n3.Program D3 Teknik Informatika di pantau BAN-PT karena Tidak Terakreditasi'),
+(12, 21912, 'STMIK Tasik', '2023-03-24', 'PEMBELAJARAN FIKTIF');
 
 -- --------------------------------------------------------
 
@@ -685,7 +690,7 @@ ALTER TABLE `detail_ptb`
 -- AUTO_INCREMENT for table `monev`
 --
 ALTER TABLE `monev`
-  MODIFY `no` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `no` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `pts`
