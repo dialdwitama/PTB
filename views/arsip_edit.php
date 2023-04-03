@@ -49,6 +49,7 @@ $data= mysqli_fetch_array($ambil);
                             <label for="stat" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
 								<select name="stat" class="form-control">
+                                    <option value="">---Pilih---</option>
 									<option value="Aman">Aman</option>
 									<option value="Menunggu Pergabungan">Menunggu Pergabungan</option>
 									<option value="Menunggu Pelaporan">Menunggu Pelaporan</option>

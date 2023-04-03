@@ -44,14 +44,14 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['progressReport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                     <td>
-                                        <a href="?page=edit&actions=detail_ptb&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
+                                        <a href="?page=edit&actions=detail_ptb&id=<?= $data['id_pts'] ?>" class="btn btn-info btn-xs">
                                             <span class="fa fa-eye"></span>
                                         </a>
-                                        <a href="?page=arsip&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=arsip&actions=edit&id=<?= $data['id_pts'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
 										</a>
-                                        <a href="?page=arsip&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=arsip&actions=delete&id=<?= $data['id_pts'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
@@ -74,3 +74,17 @@ if(!isset($_SESSION ['idsesi'])) {
         </div>
     </div>
 </div>
+
+<?php
+if(isset($_POST['hapus_data'])) {
+  // tampilkan pesan peringatan sebelum menghapus data
+  echo '<script language="javascript">';
+  echo 'if(confirm("Apakah anda yakin ingin menghapus data?")) {';
+  // kode untuk menghapus data
+  echo 'alert("Data telah berhasil dihapus.");';
+  echo '} else {';
+  echo 'alert("Penghapusan data dibatalkan.");';
+  echo '}';
+  echo '</script>';
+}
+?>
