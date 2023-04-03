@@ -35,7 +35,7 @@ if(!isset($_SESSION ['idsesi'])) {
                                 ?>
                                 <tr>
                                     <td><?= $nomor ?></td>
-                                    <td><?= $data['tgl'] ?></td>
+                                    <td><?= $data['tgl_ptb'] ?></td>
                                     <td><?= $data['permintaan'] ?></td>
                                     <td><?= $data['kegiatan'] ?></td>
                                     <td><?= $data['hasil_keg'] ?></td>
@@ -43,10 +43,10 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['ket'] ?></td> 
                                     <td>
                                         </a>
-                                        <a href="?page=arsip&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=detail&actions=editptb&id=<?= $data['id_ptb'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-                                        <a href="?page=arsip&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=arsip&actions=delete&id=<?= $data['id_ptb'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
@@ -57,7 +57,7 @@ if(!isset($_SESSION ['idsesi'])) {
                         <tfoot>
                             <tr>
                                 <td colspan="7">
-                                    <a href="?page=arsip&actions=tambah" class="btn btn-info btn-sm">
+                                    <a href="?page=tambah&actions=masalah_pt" class="btn btn-info btn-sm">
                                         Tambah Data Permasalahan
                                     </a>
                                 </td>

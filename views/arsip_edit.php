@@ -1,6 +1,6 @@
 <?php
 $id=$_GET['id'];
-$ambil=  mysqli_query($koneksi, "SELECT * FROM pts WHERE id ='$id'") or die ("SQL Edit error");
+$ambil=  mysqli_query($koneksi, "SELECT * FROM pts WHERE id_pts ='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
 <div class="container">
@@ -107,7 +107,7 @@ if($_POST){
     $progressReport=$_POST['progressReport'];
 	$pic=$_POST['pic'];
     //buat sql 
-    $sql="UPDATE pts SET kode='$kode', pt='$pt', progressTerakhir='$progressTerakhir', tgl='$tgl', deadline='$deadline', stat='$stat', progressReport='$progressReport', pic='$pic' WHERE id ='$id'"; 
+    $sql="UPDATE pts SET kode='$kode', pt='$pt', progressTerakhir='$progressTerakhir', tgl='$tgl', deadline='$deadline', stat='$stat', progressReport='$progressReport', pic='$pic' WHERE id_pts ='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     }
     
