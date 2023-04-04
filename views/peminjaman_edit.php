@@ -1,5 +1,5 @@
 <?php
-$id=$_GET['no'];
+$id=$_GET['id'];
 $ambil=  mysqli_query($koneksi, "SELECT * FROM monev WHERE no='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
@@ -7,7 +7,7 @@ $data= mysqli_fetch_array($ambil);
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div style="background: #1E90FF" class="panel-heading">
+                <div style="background: #028abf" class="panel-heading">
                     <h3 class="panel-title">Update Data Monev PT</h3>
                 </div>
                 <div class="panel-body">
@@ -45,7 +45,7 @@ $data= mysqli_fetch_array($ambil);
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" style="background: #1E90FF">
+                                <button type="submit" style="background: #028abf">
                                     <span class="fa fa-edit"></span> Update Data Monev PT</button>
                             </div>
                         </div>

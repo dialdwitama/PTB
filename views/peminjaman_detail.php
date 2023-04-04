@@ -36,12 +36,21 @@
                 <div class="panel-footer">
                     <a href="?page=peminjaman&actions=tampil" class="btn btn-success btn-sm">
                         Kembali ke Data Monev </a>
+                        <tfoot> 
+                            <tr>
+                                 <td colspan="7">
+                                    <a href="?page=tambah&actions=detail_monev&id=<?= $data['id_monev'] ?>" class="btn btn-info btn-sm">
+                                        Tambah Detail Monev
 
+                                    </a>  
+                                <td> 
+                            </tr>
+                        </tfoot>
                         
                         <a href="?page=edit&actions=detail_monev&id=<?= $data['id_monev'] ?>" class="btn btn-warning btn-sm">
                                             <span class="fa fa-edit"></span>
                                         </a>
-
+                
                 </div>
                 <!--end panel footer-->
 

@@ -1,14 +1,9 @@
-<?php
-$id=$_GET['id'];
-$ambil=  mysqli_query($koneksi, "SELECT * FROM detail_monev WHERE id_monev='$id'") or die ("SQL Edit error");
-$data= mysqli_fetch_array($ambil);
-?>
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
                 <div style="background: #028abf" class="panel-heading">
-                    <h3 class="panel-title">Update Detail Monev PT</h3>
+                    <h3 class="panel-title">Form Tambah Detail Monev PT</h3>
                 </div>
                 <div class="panel-body">
                     <!--membuat form untuk tambah data-->
@@ -16,25 +11,25 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="a_monev" class="col-sm-3 control-label">Alamat Monev</label>
                              <div class="col-sm-9">
-								<input type="text" name="a_monev" value="<?=$data['a_monev']?>"class="form-control" id="inputEmail3" placeholder="Input Alamat Monev"  required>
+								<input type="text" name="a_monev" class="form-control" id="inputEmail3" placeholder="Input Alamat Monev"  required>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="a_direk" class="col-sm-3 control-label">Input Alamat Direktori</label>
                             <div class="col-sm-9">
-                                <input type="text" name="a_direk" value="<?=$data['a_direk']?>"class="form-control" id="inputEmail3" placeholder="Input Alamat Direktori">
+                                <input type="text" name="a_direk" class="form-control" id="inputEmail3" placeholder="Input Alamat Direktori">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="a_pddikti" class="col-sm-3 control-label">Alamat PDDIKTI</label>
                             <div class="col-sm-9">
-                                <input type="text" name="a_pddikti" value="<?=$data['a_pddikti']?>" class="form-control" id="inputPassword3" placeholder="Input Alamat PDDIKTI">
+                                <input type="text" name="a_pddikti"  class="form-control" id="inputPassword3" placeholder="Input Alamat PDDIKTI">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="h_monev" class="col-sm-3 control-label">Hasil Monev</label>
                             <div class="col-sm-9">
-                            <input type="text" name="h_monev" value="<?=$data['h_monev']?>" class="form-control" id="inputPassword3" placeholder="Input Hasil Monev">
+                            <input type="text" name="h_monev" class="form-control" id="inputPassword3" placeholder="Input Hasil Monev">
                          <?php
                             // deklarasi variabel teks
                             $teks = "";
@@ -42,11 +37,11 @@ $data= mysqli_fetch_array($ambil);
                         <textarea id="teks" name="teks" rows="5" cols="30" class="form-control"><?php echo $teks; ?></textarea>
                             </div>
                         </div>
-                    </form>
+
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit">
-                                    <span class="fa fa-edit"></span> Update Data Monev PT</button>
+                                <button style="background: #028abf" type="submit">
+                                    <span class="fa fa-save"></span> Simpan Detail Monev</button>
                             </div>
                         </div>
                     </form>
@@ -54,8 +49,8 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=peminjaman&actions=detail&id=<?= $data['id_monev'] ?>" class="btn btn-danger btn-sm">
-                        Kembali Ke Data Monev PT
+                    <a href="?page=edit&actions=detail_monev" class="btn btn-danger btn-sm">
+                        Kembali Ke Data Monev
                     </a>
                 </div>
             </div>
@@ -64,21 +59,21 @@ $data= mysqli_fetch_array($ambil);
     </div>
 </div>
 
-<?php 
+<?php
 if($_POST){
     //Ambil data dari form
-
-	$a_monev=$_POST['a_monev'];
-    $a_direk=$_POST['a_direk'];
-    $a_pddikti=$_POST['a_pddikti'];
+    $id_monev=$_POST['id'];   
+    $a_monev=$_POST['a_monev'];
+	$a_direk=$_POST['a_direk'];
+	$a_pddikti=$_POST['a_pddikti'];
     $h_monev=$_POST['h_monev'];
     //buat sql
-    $sql="UPDATE detail_monev SET a_monev='$a_monev', a_direk='$a_direk', a_pddikti='$a_pddikti', h_monev='$h_monev' WHERE id_monev='$id'"; 
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
+    $sql="INSERT INTO detail_monev VALUES ('$id_monev','$a_monev','$a_direk','$a_pddikti','$h_monev')";
+    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
     }else{
-        echo "<script>alert('Edit Data Gagal');<script>";
+        echo "<script>alert('Simpan Data Gagal');<script>";
     }
     }
 

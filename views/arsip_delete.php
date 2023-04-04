@@ -1,6 +1,6 @@
 <?php
 //membuat query untuk hapus data
-$sql="DELETE FROM pts WHERE no ='".$_GET['id_pts']."'";
+$sql="DELETE FROM pts WHERE id_pts ='".$_GET['id']."'";
 $query=mysqli_query($koneksi, $sql) or die ("SQL Hapus Error");
 if($query){
     echo"<script> window.location.assign('?page=arsip&actions=tampil');</script>";

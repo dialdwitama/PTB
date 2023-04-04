@@ -8,7 +8,7 @@ if(!isset($_SESSION ['idsesi'])) {
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div class="panel-heading" style="background: #1E90FF">
+                <div class="panel-heading" style="background: #028abf">
                     <h3 class="panel-title"><span class="fa fa-user-plus"></span> Data Permasalahan PT</h3>
                 </div>
                 <div class="panel-body">
@@ -43,10 +43,10 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['ket'] ?></td> 
                                     <td>
                                         </a>
-                                        <a href="?page=detail&actions=editptb&id=<?= $data['id_ptb'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=detail&actions=editptb&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-                                        <a href="?page=delete&actions=masalah_pt&id=<?= $data['id_ptb'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=arsip&actions=delete&id=<?= $data['id_ptb'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
