@@ -6,7 +6,7 @@ require 'config/koneksi.php'; ?>
 
 <style type="text/css">
     .background{
-        background-color: #1E90FF !important;
+        background-color: #028abf !important;
     }
 </style>
 <html>
