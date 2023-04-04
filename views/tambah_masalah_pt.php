@@ -92,13 +92,19 @@ if($_POST){
 	$kegiatan=$_POST['kegiatan'];
     $hasil_keg=$_POST['hasil_keg'];
     $ket=$_POST['ket'];
+    $surat=$_POST['surat'];
+    $berita_acara=$_POST['berita_acara'];
+    $foto=$_POST['foto'];
+    $absensi=$_POST['absensi'];
     //buat sql
-    $sql="INSERT INTO detail_ptb VALUES ('$tgl_ptb','$permintaan','$kegiatan','$hasil_keg','$lampiran','$ket')";
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
+    $sql="INSERT INTO detail_ptb VALUES ('$tgl_ptb','$permintaan','$kegiatan','$hasil_keg','','$ket')";
+    //$query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
+    $query=  mysqli_query($koneksi, $sql, $sql2, $sql3) or die ("SQL Simpan Error");
+
     if ($query){
-        echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
+        echo "<script>window.location.assign('?page=detail&actions=editptb');</script>";
     }else{
         echo "<script>alert('Simpan Data Gagal');<script>";
     }
-
+}
 ?>

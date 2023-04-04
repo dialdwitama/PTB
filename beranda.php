@@ -12,8 +12,8 @@
         <!--colomn kedua-->
         <div class="col-sm-9 col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">SI PTB</h3>
+                <div class="panel-heading" style="background:#1E90FF">
+                    <h3 class="panel-title" style="color:white">SI PTB</h3>
                 </div>
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
