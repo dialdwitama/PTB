@@ -19,7 +19,7 @@
         </div>
         <div style="background: #028abf" id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav" style="background: #028abf">
-                <li class="active"><a href="#" style="background: #028abf">Home</a></li>
+                <li class="active"><a href="?page=utama" style="background: #028abf">Home</a></li>
 
                 <?php if(isset($_SESSION['level']) && $_SESSION['level']==1) { ?>
                 <li class="dropdown">

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div class="panel-heading" style="background: #1E90FF">
+                <div class="panel-heading" style="background: #028abf">
                     <h3 class="panel-title">Form Tambah Data Permasalahan PT</h3>
                 </div>
                 <div class="panel-body">
@@ -65,7 +65,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" class="btn btn-success" style="background: #1E90FF">
+                                <button type="submit" class="btn btn-success" style="background: #028abf">
                                     <span class="fa fa-save"></span> Simpan Data</button>
                             </div>
                         </div>

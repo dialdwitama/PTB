@@ -7,7 +7,7 @@ $data= mysqli_fetch_array($ambil);
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div style="background: #1E90FF" class="panel-heading">
+                <div style="background: #028abf" class="panel-heading">
                     <h3 class="panel-title">Update Detail Monev PT</h3>
                 </div>
                 <div class="panel-body">

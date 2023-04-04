@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div style="background: #1E90FF" class="panel-heading">
+                <div style="background: #028abf" class="panel-heading">
                     <h3 class="panel-title">Form Tambah Data Monev PT</h3>
                 </div>
                 <div class="panel-body">
@@ -38,7 +38,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button style="background: #1E90FF" type="submit">
+                                <button style="background: #028abf" type="submit">
                                     <span class="fa fa-save"></span> Simpan Peminjaman Data</button>
                             </div>
                         </div>
