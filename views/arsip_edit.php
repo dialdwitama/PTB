@@ -49,13 +49,11 @@ $data= mysqli_fetch_array($ambil);
                             <label for="stat" class="col-sm-3 control-label">Status</label>
                             <div class="col-sm-2 col-xs-9">
 								<select name="stat" class="form-control">
-                                    <option value="">---Pilih---</option>
-									<option value="Aman">Aman</option>
-									<option value="Menunggu Pergabungan">Menunggu Pergabungan</option>
-									<option value="Menunggu Pelaporan">Menunggu Pelaporan</option>
-                                    <option value="Sudah Kedaluwarsa">Sudah Kedaluwarsa</option>
-                                    <option value="Sedang Ditindaklanjuti">Sedang Ditindaklanjuti</option>
-                                    <option value="Tutup">Tutup</option>
+                                <?php 
+                                    $status=  array("","Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
+                                    for($j=6;$j>0;$j--) {?>
+                                    <option value="<?=$j?>"> <?=$status[$j]?> </option>
+                                    <?php }?>
 								</select>
                             </div>
                         </div>
@@ -69,9 +67,13 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">Person In Charge (PIC)</label>
                             <div class="col-sm-9">
-                            <select name="pic" class="form-control">
-                                <option value="">---Pilih---</option>
-                                <option value="LLDIKTI 4">LLDIKTI 4</option></select>
+                                <select name="pic" class="form-control">
+                                <?php 
+                                    $status=  array("","LLDIKTI 4");
+                                    for($j=1;$j>0;$j--) {?>
+                                    <option value="<?=$j?>"> <?=$status[$j]?> </option>
+                                    <?php }?>
+								</select>
                             </div>
                         </div>
                         <div class="form-group">

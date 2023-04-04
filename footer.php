@@ -10,7 +10,7 @@
 			<div class="footer-left">
 
 				<p class="footer-links">
-					<a class="link-1" href="#">Home</a>
+					<a class="link-1" href="?page=utama">Home</a>
 
 					<a href="mailto:informasi@lldikti4.or.id">Contact Us</a>
 
