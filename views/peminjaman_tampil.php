@@ -40,13 +40,13 @@ if(!isset($_SESSION ['idsesi'])) {
 									<td><?= $data['tglmonev'] ?></td>
                                     <td><?= $data['masalah'] ?></td>
                                     <td>
-                                        <a href="?page=peminjaman&actions=detail&id=<?= $data['no'] ?>" class="btn btn-info btn-xs">
+                                        <a href="?page=peminjaman&actions=detail&id=<?= $data['id'] ?>" class="btn btn-info btn-xs">
                                             <span class="fa fa-eye"></span>
                                         </a>
-                                        <a href="?page=peminjaman&actions=edit&id=<?= $data['no'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=peminjaman&actions=edit&id=<?= $data['id'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
-                                        <a href="?page=peminjaman&actions=delete&id=<?= $data['no'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=peminjaman&actions=delete&id=<?= $data['id'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>

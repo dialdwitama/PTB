@@ -8,7 +8,8 @@
                 <div class="panel-body">
                     <!--Menampilkan data detail arsip-->
                     <?php
-                    $sql = "SELECT *FROM detail_monev WHERE id_monev='" . $_GET ['id'] . "'";
+                    $id_monev = $_GET['id'];
+                    $sql = "SELECT *FROM detail_monev WHERE id = '$id_monev'";
                     //proses query ke database
                     $query = mysqli_query($koneksi, $sql) or die("SQL Detail error");
                     //Merubaha data hasil query kedalam bentuk array
