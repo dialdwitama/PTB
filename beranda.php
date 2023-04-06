@@ -14,7 +14,7 @@
         <!--colomn kedua-->
         <div class="col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-heading" style="background:#1E90FF">
+                <div class="panel-heading" style="background:#028abf">
                     <h3 class="panel-title" style="color:white">SI PTB</h3>
                 </div>
                 <div class="panel-body">
