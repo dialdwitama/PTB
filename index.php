@@ -1,5 +1,11 @@
 <?php session_start();
 //Aktifkan session
+//Pada halaman beranda, periksa session atau cookie untuk menentukan apakah menampilkan tombol login atau tidak
+if(isset($_SESSION["login"]) && $_SESSION["login"] === true) { // atau if(isset($_COOKIE["login"]) && $_COOKIE["login"] === true)
+    // Tampilkan halaman beranda tanpa tombol login
+} else {
+    // Tampilkan halaman beranda dengan tombol login
+}
 
 require 'config/koneksi.php'; ?>
 <!DOCTYPE html>

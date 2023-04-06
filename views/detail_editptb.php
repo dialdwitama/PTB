@@ -75,16 +75,14 @@ $data= mysqli_fetch_array($ambil);
 <?php 
 if($_POST){
     //Ambil data dari form
-    $kode=$_POST['kode'];
-    $pt=$_POST['pt'];
-	$progressTerakhir=$_POST['progressTerakhir'];
-    $tgl=$_POST['tgl'];
-	$deadline=$_POST['deadline'];
-    $stat=$_POST['stat'];
-    $progressReport=$_POST['progressReport'];
-	$pic=$_POST['pic'];
+    $tgl_ptb=$_POST['tgl_ptb'];
+    $permintaan=$_POST['permintaan'];
+	$kegiatan=$_POST['kegiatan'];
+    $hasil_keg=$_POST['hasil_keg'];
+	$lampiran=$_POST['lampiran'];
+    $ket=$_POST['ket'];
     //buat sql 
-    $sql="UPDATE pts SET kode='$kode', pt='$pt', progressTerakhir='$progressTerakhir', tgl='$tgl', deadline='$deadline', stat='$stat', progressReport='$progressReport', pic='$pic' WHERE id_pts ='$id'"; 
+    $sql="UPDATE detail_ptb SET tgl_ptb='$tgl_ptb', pt='$pt', permintaan='$permintaan', kegiatan='$kegiatan', hasil_keg='$hasil_keg', ket='$ket' WHERE id_ptb ='$id_ptb'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     }
     

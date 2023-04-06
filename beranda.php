@@ -2,6 +2,8 @@
     .background{
         background-color: #028abf !important;
     }
+
+    
 </style>
 <div class="container">
     <div class="row">
@@ -10,7 +12,7 @@
     </div>
     <div class="row">
         <!--colomn kedua-->
-        <div class="col-sm-9 col-xs-12">
+        <div class="col-xs-12">
             <div class="panel panel-default">
                 <div class="panel-heading" style="background:#1E90FF">
                     <h3 class="panel-title" style="color:white">SI PTB</h3>
@@ -57,8 +59,8 @@
             </div>
         </div>
         <!--akhir colomn kedua-->
-        <div class="col-sm-3 col-xs-12">
-            <!--Jika terjadi login error tampilkan pesan ini-->
+        <!--<div class="col-sm-3 col-xs-12">
+            Jika terjadi login error tampilkan pesan ini
             <?php if(isset($_GET['error']) ) {?>
             <div class="alert alert-danger">Maaf! Login Gagal, Coba Lagi..</div>
             <?php }?>
@@ -101,7 +103,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
             <?php } ?>
     </div>
 </div>
