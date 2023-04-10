@@ -47,11 +47,11 @@ if(!isset($_SESSION ['idsesi'])) {
                                         <a href="?page=edit&actions=detail_ptb&id=<?= $data['id_pts'] ?>" class="btn btn-info btn-xs">
                                             <span class="fa fa-eye"></span>
                                         </a>
-                                        <a href="?page=arsip&actions=edit&id=<?= $data['id_pts'] ?>" class="btn btn-warning btn-xs">
+                                        <a href="?page=ptb&actions=edit&id=<?= $data['id_pts'] ?>" class="btn btn-warning btn-xs">
                                             <span class="fa fa-edit"></span>
                                         </a>
 										</a>
-                                        <a href="?page=arsip&actions=delete&id=<?= $data['id_pts'] ?>" class="btn btn-danger btn-xs">
+                                        <a href="?page=ptb&actions=delete&id=<?= $data['id_pts'] ?>" class="btn btn-danger btn-xs">
                                             <span class="fa fa-remove"></span>
                                         </a>
                                     </td>
@@ -62,7 +62,7 @@ if(!isset($_SESSION ['idsesi'])) {
                         <tfoot>
                             <tr>
                                 <td colspan="7">
-                                    <a href="?page=arsip&actions=tambah" class="btn btn-info btn-sm">
+                                    <a href="?page=ptb&actions=tambah" class="btn btn-info btn-sm">
                                         Tambah Data
                                     </a>
                                 </td>

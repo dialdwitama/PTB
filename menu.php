@@ -31,8 +31,8 @@
                 <li class="dropdown">
                     <a style="background: #028abf" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kelola Data <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="?page=arsip&actions=tampil">PTS Bermasalah</a></li>
-                        <li><a href="?page=peminjaman&actions=tampil">Rekapitulasi Monev</a></li>
+                        <li><a href="?page=ptb&actions=tampil">PTS Bermasalah</a></li>
+                        <li><a href="?page=monev&actions=tampil">Rekapitulasi Monev</a></li>
                     </ul>
                 </li>
                 <li><ul><a></a></li></ul>

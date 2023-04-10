@@ -54,7 +54,7 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=peminjaman&actions=tampil" class="btn btn-danger btn-sm">
+                    <a href="?page=monev&actions=tampil" class="btn btn-danger btn-sm">
                         Kembali Ke Data Monev PT
                     </a>
                 </div>
@@ -75,7 +75,7 @@ if($_POST){
     $sql="UPDATE monev SET kode='$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE no='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
-        echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
+        echo "<script>window.location.assign('?page=monev&actions=tampil');</script>";
     }else{
         echo "<script>alert('Edit Data Gagal');<script>";
     }

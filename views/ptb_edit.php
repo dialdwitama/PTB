@@ -81,7 +81,7 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=arsip&actions=tampil" class="btn btn-danger btn-sm">
+                    <a href="?page=ptb&actions=tampil" class="btn btn-danger btn-sm">
                         Kembali Ke Data PTB
                     </a>
                 </div>
@@ -108,7 +108,7 @@ if($_POST){
     }
     
     if ($query){
-        echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
+        echo "<script>window.location.assign('?page=ptb&actions=tampil');</script>";
     }else{
         echo "<script>alert('Edit Data Gagal');<script>";
     }
