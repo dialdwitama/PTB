@@ -1,6 +1,6 @@
 <?php
 $id=$_GET['id'];
-$ambil=  mysqli_query($koneksi, "SELECT * FROM detail_monev WHERE id_monev='$id'") or die ("SQL Edit error");
+$ambil=  mysqli_query($koneksi, "SELECT * FROM monev WHERE no='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
 <div class="container">
@@ -35,17 +35,11 @@ $data= mysqli_fetch_array($ambil);
                             <label for="h_monev" class="col-sm-3 control-label">Hasil Monev</label>
                             <div class="col-sm-9">
                             <input type="text" name="h_monev" value="<?=$data['h_monev']?>" class="form-control" id="inputPassword3" placeholder="Input Hasil Monev">
-                         <?php
-                            // deklarasi variabel teks
-                            $teks = "";
-                         ?>
-                        <textarea id="teks" name="teks" rows="5" cols="30" class="form-control"><?php echo $teks; ?></textarea>
-                            </div>
                         </div>
                     </form>
-                        <div class="form-group">
+                        <div  class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit">
+                                <button style="background: #028abf" type="submit">
                                     <span class="fa fa-edit"></span> Update Data Monev PT</button>
                             </div>
                         </div>
@@ -54,7 +48,7 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=peminjaman&actions=detail&id=<?= $data['id_monev'] ?>" class="btn btn-danger btn-sm">
+                    <a href="?page=peminjaman&actions=detail&id=<?= $data['no'] ?>" class="btn btn-danger btn-sm">
                         Kembali Ke Data Monev PT
                     </a>
                 </div>
@@ -67,13 +61,12 @@ $data= mysqli_fetch_array($ambil);
 <?php 
 if($_POST){
     //Ambil data dari form
-
 	$a_monev=$_POST['a_monev'];
     $a_direk=$_POST['a_direk'];
     $a_pddikti=$_POST['a_pddikti'];
     $h_monev=$_POST['h_monev'];
     //buat sql
-    $sql="UPDATE detail_monev SET a_monev='$a_monev', a_direk='$a_direk', a_pddikti='$a_pddikti', h_monev='$h_monev' WHERE id_monev='$id'"; 
+    $sql="UPDATE monev SET a_monev='$a_monev', a_direk='$a_direk', a_pddikti='$a_pddikti', h_monev='$h_monev' WHERE no='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
         echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";

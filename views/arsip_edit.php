@@ -50,9 +50,9 @@ $data= mysqli_fetch_array($ambil);
                             <div class="col-sm-2 col-xs-9">
 								<select name="stat" class="form-control">
                                 <?php 
-                                    $status=  array("","Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
-                                    for($j=6;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$status[$j]?> </option>
+                                    $stat=  array("Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
+                                    for($j=5;$j>0;$j--) {?>
+                                    <option value="<?=$j?>"> <?=$stat[$j]?> </option>
                                     <?php }?>
 								</select>
                             </div>
@@ -67,13 +67,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">Person In Charge (PIC)</label>
                             <div class="col-sm-9">
-                                <select name="pic" class="form-control">
-                                <?php 
-                                    $status=  array("","LLDIKTI 4");
-                                    for($j=1;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$status[$j]?> </option>
-                                    <?php }?>
-								</select>
+                            <input type="text" name="pic" value="<?=$data['pic']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">

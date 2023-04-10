@@ -8,7 +8,7 @@
                 <div class="panel-body">
                     <!--Menampilkan data detail arsip-->
                     <?php
-                    $sql = "SELECT *FROM detail_monev WHERE id_monev='" . $_GET ['id'] . "'";
+                    $sql = "SELECT *FROM monev WHERE no='" . $_GET ['id'] . "'";
                     //proses query ke database
                     $query = mysqli_query($koneksi, $sql) or die("SQL Detail error");
                     //Merubaha data hasil query kedalam bentuk array
@@ -34,20 +34,13 @@
                 </div> <!--end panel-body-->
                 <!--panel footer--> 
                 <div class="panel-footer">
-                    <a href="?page=peminjaman&actions=tampil" class="btn btn-success btn-sm">
+                    <a href="?page=peminjaman&actions=tampil" class="btn btn-danger btn-sm">
                         Kembali ke Data Monev </a>
                         <tfoot> 
-                            <tr>
-                                 <td colspan="7">
-                                    <a href="?page=tambah&actions=detail_monev&id=<?= $data['id_monev'] ?>" class="btn btn-info btn-sm">
-                                        Tambah Detail Monev
-
-                                    </a>  
-                                <td> 
-                            </tr>
+                        
                         </tfoot>
                         
-                        <a href="?page=edit&actions=detail_monev&id=<?= $data['id_monev'] ?>" class="btn btn-warning btn-sm">
+                        <a href="?page=edit&actions=detail_monev&id=<?= $data['no'] ?>" class="btn btn-warning btn-sm">
                                             <span class="fa fa-edit"></span>
                                         </a>
                 

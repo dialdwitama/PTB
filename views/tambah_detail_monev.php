@@ -49,7 +49,7 @@
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=edit&actions=detail_monev" class="btn btn-danger btn-sm">
+                    <a href="?page=peminjaman&actions=detail&id=<?= $data['no'] ?>" class="btn btn-danger btn-sm">
                         Kembali Ke Data Monev
                     </a>
                 </div>
