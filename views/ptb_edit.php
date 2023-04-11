@@ -50,9 +50,9 @@ $data= mysqli_fetch_array($ambil);
                             <div class="col-sm-2 col-xs-9">
 								<select name="stat" class="form-control">
                                 <?php 
-                                    $stat=  array("Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
-                                    for($j=5;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$stat[$j]?> </option>
+                                    $stat=  array("","Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
+                                    for($i=6;$i>0;$i--) {?>
+                                    <option value="<?=$i?>"> <?=$stat[$i]?> </option>
                                     <?php }?>
 								</select>
                             </div>
@@ -60,7 +60,7 @@ $data= mysqli_fetch_array($ambil);
                         <!--Akhir Status-->
                         <div class="form-group">
                             <label for="progressReport" class="col-sm-3 control-label">Progress Report</label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9" >
                                 <input type="text" name="progressReport" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
