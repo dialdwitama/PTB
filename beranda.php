@@ -1,7 +1,9 @@
 <style type="text/css">
     .background{
-        background-color: #1E90FF !important;
+        background-color: #028abf !important;
     }
+
+    
 </style>
 <div class="container">
     <div class="row">
@@ -10,10 +12,10 @@
     </div>
     <div class="row">
         <!--colomn kedua-->
-        <div class="col-sm-9 col-xs-12">
+        <div class="col-xs-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">SI PTB</h3>
+                <div class="panel-heading" style="background:#028abf">
+                    <h3 class="panel-title" style="color:white">SI PTB</h3>
                 </div>
                 <div class="panel-body">
                     <table id="dtskripsi" class="table table-bordered table-striped table-hover">
@@ -57,8 +59,8 @@
             </div>
         </div>
         <!--akhir colomn kedua-->
-        <div class="col-sm-3 col-xs-12">
-            <!--Jika terjadi login error tampilkan pesan ini-->
+        <!--<div class="col-sm-3 col-xs-12">
+            Jika terjadi login error tampilkan pesan ini
             <?php if(isset($_GET['error']) ) {?>
             <div class="alert alert-danger">Maaf! Login Gagal, Coba Lagi..</div>
             <?php }?>
@@ -71,7 +73,7 @@
            } else { ?>
 
             <div class="panel panel-success">
-                <div style="background-color: #1E90FF" class="panel-heading">
+                <div style="background-color: #028abf" class="panel-heading">
                     <h3 class="panel-title">Masuk Ke Sistem</h3>
                 </div>
                 <div class="panel-body">
@@ -91,7 +93,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div style="background-color: #1E90FF"  class="col-sm-12">
+                            <div style="background-color: #028abf"  class="col-sm-12">
                                 <button type="submit" name="login" value="login"
                                         class="background"><span class="fa fa-unlock-alt"></span>
                                     Login Sistem
@@ -101,7 +103,7 @@
                 </div>
             </div>
 
-        </div>
+        </div>-->
             <?php } ?>
     </div>
 </div>
