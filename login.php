@@ -84,10 +84,7 @@ $_SESSION["login"] = true; // atau setcookie("login", true);
             }
 
             .form-group button {
-                background-color: #028abf;
-                color: #ffffff;
                 border: none;
-                padding: 10px 20px;
                 font-size: 14px;
                 cursor: pointer;
                 text-align: center;
@@ -101,7 +98,6 @@ $_SESSION["login"] = true; // atau setcookie("login", true);
 
         <div class="container">
             <div class="row">
-                <!--colomn kedua-->
             
                 <!--akhir colomn kedua-->
                 <div class="col-sm-3 col-xs-12">
