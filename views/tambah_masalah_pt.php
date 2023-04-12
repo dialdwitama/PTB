@@ -85,8 +85,8 @@
 </div>
 
 <?php
-if($_POST){
-    //Ambil data dari form
+/*if($_POST){
+    Ambil data dari form
 	$tgl_ptb=$_POST['tgl_ptb'];
 	$permintaan=$_POST['permintaan'];
 	$kegiatan=$_POST['kegiatan'];
@@ -96,7 +96,7 @@ if($_POST){
     $berita_acara=$_POST['berita_acara'];
     $foto=$_POST['foto'];
     $absensi=$_POST['absensi'];
-    //buat sql
+    buat sql
     $sql="INSERT INTO detail_ptb VALUES ('$tgl_ptb','$permintaan','$kegiatan','$hasil_keg','','$ket')";
     //$query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
     $query=  mysqli_query($koneksi, $sql, $sql2, $sql3) or die ("SQL Simpan Error");
@@ -105,6 +105,43 @@ if($_POST){
         echo "<script>window.location.assign('?page=detail&actions=editptb');</script>";
     }else{
         echo "<script>alert('Simpan Data Gagal');<script>";
+    }
+}*/
+?>
+
+<?php
+if($_POST){
+    // Ambil data dari form
+    $tgl_ptb = $_POST['tgl_ptb'];
+    $permintaan = $_POST['permintaan'];
+    $kegiatan = $_POST['kegiatan'];
+    $hasil_keg = $_POST['hasil_keg'];
+    $ket = $_POST['ket'];
+    $surat = $_POST['surat'];
+    $berita_acara = $_POST['berita_acara'];
+    $foto = $_POST['foto'];
+    $absensi = $_POST['absensi'];
+
+    // Query untuk menyimpan data ke tabel masalah
+    $sql_ptb = "INSERT INTO detail_ptb (tgl_ptb, permintaan, kegiatan, hasil_keg, ket) VALUES ('$tgl_ptb', '$permintaan', '$kegiatan', '$hasil_keg', '$ket')";
+
+    // Jalankan query untuk menyimpan data ke tabel masalah
+    $query_ptb = mysqli_query($koneksi, $sql_ptb);
+
+    // Ambil id dari data yang baru saja disimpan
+    $ptb_id = mysqli_insert_id($koneksi);
+
+    // Query untuk menyimpan data ke tabel lampiran
+    $sql_lampiran = "INSERT INTO lampiran (ptb_id, surat, berita_acara, foto, absensi) VALUES ('$ptb_id', '$surat', '$berita_acara', '$foto', '$absensi')";
+
+    // Jalankan query untuk menyimpan data ke tabel lampiran
+    $query_lampiran = mysqli_query($koneksi, $sql_lampiran);
+
+    // Cek apakah query berhasil dijalankan
+    if ($query_ptb && $query_lampiran){
+        echo "<script>window.location.assign('?page=detail&actions=editptb');</script>";
+    }else{
+        echo "<script>alert('Simpan Data Gagal');</script>";
     }
 }
 ?>
