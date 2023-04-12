@@ -1,5 +1,5 @@
 <?php
-$id=$_GET['no'];
+$id=$_GET['id'];
 $ambil=  mysqli_query($koneksi, "SELECT * FROM monev WHERE no='$id'") or die ("SQL Edit error");
 $data= mysqli_fetch_array($ambil);
 ?>
@@ -35,14 +35,12 @@ $data= mysqli_fetch_array($ambil);
                             </div>
                         </div>
              
-                  <div class="form-group">
-                  <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
-                  <div class="col-sm-9">
-                  <input type="text" name="masalah" value="<?=$data['masalah']?>"class="form-control" id="inputEmail3">
-        </div>
-    </form>
-
-
+                        <div class="form-group">
+                            <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
+                            <div class="col-sm-9">
+                            <textarea name="masalah" class="form-control" id="inputEmail3"><?= $data['masalah'] ?></textarea>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
                                 <button type="submit" style="background: #1E90FF">
@@ -54,7 +52,7 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=peminjaman&actions=tampil" class="btn btn-danger btn-sm">
+                    <a href="?page=monev&actions=tampil" class="btn btn-danger btn-sm">
                         Kembali Ke Data Monev PT
                     </a>
                 </div>
@@ -75,7 +73,7 @@ if($_POST){
     $sql="UPDATE monev SET kode='$kode', pt='$pt', tglmonev='$tglmonev', masalah='$masalah' WHERE no='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
     if ($query){
-        echo "<script>window.location.assign('?page=peminjaman&actions=tampil');</script>";
+        echo "<script>window.location.assign('?page=monev&actions=tampil');</script>";
     }else{
         echo "<script>alert('Edit Data Gagal');<script>";
     }
