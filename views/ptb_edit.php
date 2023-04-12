@@ -50,9 +50,9 @@ $data= mysqli_fetch_array($ambil);
                             <div class="col-sm-2 col-xs-9">
 								<select name="stat" class="form-control">
                                 <?php 
-                                    $status=  array("","Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
-                                    for($j=6;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$status[$j]?> </option>
+                                    $stat=  array("","Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
+                                    for($i=6;$i>0;$i--) {?>
+                                    <option value="<?=$i?>"> <?=$stat[$i]?> </option>
                                     <?php }?>
 								</select>
                             </div>
@@ -60,20 +60,14 @@ $data= mysqli_fetch_array($ambil);
                         <!--Akhir Status-->
                         <div class="form-group">
                             <label for="progressReport" class="col-sm-3 control-label">Progress Report</label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-9" >
                                 <input type="text" name="progressReport" value="<?=$data['progressReport']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="pic" class="col-sm-3 control-label">Person In Charge (PIC)</label>
                             <div class="col-sm-9">
-                                <select name="pic" class="form-control">
-                                <?php 
-                                    $status=  array("","LLDIKTI 4");
-                                    for($j=1;$j>0;$j--) {?>
-                                    <option value="<?=$j?>"> <?=$status[$j]?> </option>
-                                    <?php }?>
-								</select>
+                            <input type="text" name="pic" value="<?=$data['pic']?>" class="form-control" id="inputPassword3" placeholder="">
                             </div>
                         </div>
                         <div class="form-group">
@@ -87,7 +81,7 @@ $data= mysqli_fetch_array($ambil);
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=arsip&actions=tampil" class="btn btn-danger btn-sm">
+                    <a href="?page=ptb&actions=tampil" class="btn btn-danger btn-sm">
                         Kembali Ke Data PTB
                     </a>
                 </div>
@@ -114,7 +108,7 @@ if($_POST){
     }
     
     if ($query){
-        echo "<script>window.location.assign('?page=arsip&actions=tampil');</script>";
+        echo "<script>window.location.assign('?page=ptb&actions=tampil');</script>";
     }else{
         echo "<script>alert('Edit Data Gagal');<script>";
     }

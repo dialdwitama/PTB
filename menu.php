@@ -8,7 +8,7 @@
 
     <div class="container">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button style="background: #028abf" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -19,7 +19,7 @@
         </div>
         <div style="background: #028abf" id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav" style="background: #028abf">
-                <li class="active"><a href="?page=utama" style="background: #028abf">Home</a></li>
+                <li><a href="?page=utama" style="background: #028abf">Home</a></li>
                 
                 <?php if(!isset($_SESSION['username'])) { ?>
                 <li>
@@ -31,8 +31,8 @@
                 <li class="dropdown">
                     <a style="background: #028abf" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kelola Data <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="?page=arsip&actions=tampil">PTS Bermasalah</a></li>
-                        <li><a href="?page=peminjaman&actions=tampil">Rekapitulasi Monev</a></li>
+                        <li><a href="?page=ptb&actions=tampil">PTS Bermasalah</a></li>
+                        <li><a href="?page=monev&actions=tampil">Rekapitulasi Monev</a></li>
                     </ul>
                 </li>
                 <li><ul><a></a></li></ul>
