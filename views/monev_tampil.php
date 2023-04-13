@@ -46,7 +46,7 @@ if(!isset($_SESSION ['idsesi'])) {
 									<td><?= $data['kode'] ?></td>
 									<td><?= $data['pt'] ?></td>
 									<td><?= $data['tglmonev'] ?></td>
-                                    <td style="white-space: pre-wrap;"><?php echo nl2br($data['masalah']); ?></td>
+                                    <td style="vertical-align: middle"><?php echo nl2br($data['masalah']); ?></td>
 
 
                                     <td>
