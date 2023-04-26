@@ -103,12 +103,12 @@ if($_POST){
     //buat sql
     $sql="INSERT INTO pts VALUES ('','$kode','$pt','$progressTerakhir','$tgl','$deadline','$stat','$progressReport','$pic')";
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
-    }
+    
     if ($query){
         echo "<script>window.location.assign('?page=ptb&actions=tampil');</script>";
     }else{
         echo "<script>alert('Simpan Data Gagal');<script>";
     }
-    
+}
 
 ?>

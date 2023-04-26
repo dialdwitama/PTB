@@ -105,13 +105,15 @@ if($_POST){
     //buat sql 
     $sql="UPDATE pts SET kode='$kode', pt='$pt', progressTerakhir='$progressTerakhir', tgl='$tgl', deadline='$deadline', stat='$stat', progressReport='$progressReport', pic='$pic' WHERE id_pts ='$id'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
-    }
+    
     
     if ($query){
         echo "<script>window.location.assign('?page=ptb&actions=tampil');</script>";
     }else{
         echo "<script>alert('Edit Data Gagal');<script>";
     }
+
+}
 
 ?>
 
