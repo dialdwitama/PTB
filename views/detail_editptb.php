@@ -84,7 +84,6 @@ if($_POST){
     //buat sql 
     $sql="UPDATE detail_ptb SET tgl_ptb='$tgl_ptb', pt='$pt', permintaan='$permintaan', kegiatan='$kegiatan', hasil_keg='$hasil_keg', ket='$ket' WHERE id_ptb ='$id_ptb'"; 
     $query=  mysqli_query($koneksi, $sql) or die ("SQL Edit MHS Error");
-    }
     
     if ($query){
         echo "<script>window.location.assign('?page=ptb&actions=tampil');</script>";
@@ -94,7 +93,6 @@ if($_POST){
 
 
 
-?>
 
 
 
