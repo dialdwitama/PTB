@@ -34,22 +34,20 @@
                 </div> <!--end panel-body-->
                 <!--panel footer--> 
                 <div class="panel-footer">
-                    <a href="?page=monev&actions=tampil" class="btn btn-danger btn-sm">
+                    <a href="?page=monev&actions=tampil" class="btn btn-success btn-sm">
                         Kembali ke Data Monev </a>
-                        <tfoot> 
-                        
+                        <tfoot>
+
                         </tfoot>
                         
                         <a href="?page=edit&actions=detail_monev&id=<?= $data['no'] ?>" class="btn btn-warning btn-sm">
                                             <span class="fa fa-edit"></span>
                                         </a>
-                
+
                 </div>
                 <!--end panel footer-->
 
             </div>
 
-        </div>
     </div>
 </div>
-

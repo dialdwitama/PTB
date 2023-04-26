@@ -7,7 +7,7 @@ $data= mysqli_fetch_array($ambil);
     <div class="row">
         <div class="col-xs-12">
             <div class="panel panel-success">
-                <div style="background: #028abf" class="panel-heading">
+                <div style="background: #1E90FF" class="panel-heading">
                     <h3 class="panel-title">Update Data Monev PT</h3>
                 </div>
                 <div class="panel-body">
@@ -35,17 +35,15 @@ $data= mysqli_fetch_array($ambil);
                             </div>
                         </div>
              
-                  <div class="form-group">
-                  <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
-                  <div class="col-sm-9">
-                  <input type="text" name="masalah" value="<?=$data['masalah']?>"class="form-control" id="inputEmail3">
-        </div>
-    </form>
-
-
+                        <div class="form-group">
+                            <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
+                            <div class="col-sm-9">
+                            <textarea name="masalah" class="form-control" id="inputEmail3"><?= $data['masalah'] ?></textarea>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
-                                <button type="submit" style="background: #028abf">
+                                <button type="submit" style="background: #1E90FF">
                                     <span class="fa fa-edit"></span> Update Data Monev PT</button>
                             </div>
                         </div>

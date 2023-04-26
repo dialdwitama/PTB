@@ -29,12 +29,13 @@
                             </div>
                         </div>
 
-						 <div class="form-group">
+                        <div class="form-group">
                             <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
                             <div class="col-sm-9">
-                                <input type="text" name="masalah" class="form-control" id="inputEmail3" placeholder="Input Permasalahan" required>
+                                <textarea name="masalah" class="form-control" id="inputEmail3" placeholder="Input Permasalahan" required></textarea>
                             </div>
                         </div>
+
 
                         <div class="form-group">
                             <label for="a_monev" class="col-sm-3 control-label">Alamat Monev</label>
@@ -43,7 +44,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="a_direk" class="col-sm-3 control-label">Input Alamat Direktori</label>
+                            <label for="a_direk" class="col-sm-3 control-label">Alamat Direktori</label>
                             <div class="col-sm-9">
                                 <input type="text" name="a_direk" class="form-control" id="inputEmail3" placeholder="Input Alamat Direktori">
                             </div>
