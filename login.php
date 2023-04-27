@@ -188,14 +188,14 @@ $_SESSION["login"] = true; // atau setcookie("login", true);
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <input type="text" name="user" class="form-control input-sm"
-                                     placeholder="" required="" autocomplete="off"/>
+                                     required="" autocomplete="off"/>
                                     <label>Username</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-12">
                                     <input type="password" name="pwd" class="form-control input-sm"
-                                    placeholder="" required="" autocomplete="off"/>
+                                     required="" autocomplete="off"/>
                                     <label>Password</label>
                                 </div>
                             </div>
@@ -220,9 +220,6 @@ $_SESSION["login"] = true; // atau setcookie("login", true);
                     <img src="img/bg3.png">
                     <h5>Sistem Informasi Perguruan Tinggi Bermasalah</h5>
                 </div>
-
-                        
-                        
 
                     <div class="col-sm-3 col-xs-12">
                     <!--Jika terjadi login error tampilkan pesan ini-->

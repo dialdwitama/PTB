@@ -42,10 +42,10 @@ if(!isset($_SESSION ['idsesi'])) {
                                 $nomor++; //Penambahan satu untuk nilai var nomor
                                 ?>
                                 <tr>
-                                    <td style="vertical-align: middle"><?= $nomor ?></td>
-									<td style="vertical-align: middle"><?= $data['kode'] ?></td>
-									<td style="vertical-align: middle" width="15%"><?= $data['pt'] ?></td>
-									<td style="vertical-align: middle" width="10%"><?= $data['tglmonev'] ?></td>
+                                    <td><?= $nomor ?></td>
+									<td><?= $data['kode'] ?></td>
+									<td><?= $data['pt'] ?></td>
+									<td><?= $data['tglmonev'] ?></td>
                                     <td style="vertical-align: middle" width="50%"><?php echo nl2br($data['masalah']); ?></td>
 
 
