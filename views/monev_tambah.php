@@ -32,7 +32,7 @@
                         <div class="form-group">
                             <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
                             <div class="col-sm-9">
-                                <textarea name="masalah" class="form-control" id="inputEmail3" placeholder="Input Permasalahan" required></textarea>
+                                <textarea name="masalah" rows="4" class="form-control" id="inputEmail3" placeholder="Input Permasalahan" required></textarea>
                             </div>
                         </div>
 

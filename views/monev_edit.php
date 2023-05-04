@@ -38,7 +38,7 @@ $data= mysqli_fetch_array($ambil);
                         <div class="form-group">
                             <label for="masalah" class="col-sm-3 control-label">Permasalahan</label>
                             <div class="col-sm-9">
-                            <textarea name="masalah" class="form-control" id="inputEmail3"><?= $data['masalah'] ?></textarea>
+                            <textarea name="masalah" class="form-control" rows="6" id="inputEmail3"><?= $data['masalah'] ?></textarea>
                             </div>
                         </div>
                         <div class="form-group">
