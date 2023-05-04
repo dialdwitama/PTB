@@ -3,6 +3,8 @@ if(!isset($_SESSION ['idsesi'])) {
     echo "<script> window.location.assign('../index.php'); </script>";
 }
 ?>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 <div class="container">
     <div class="row">
@@ -22,7 +24,8 @@ if(!isset($_SESSION ['idsesi'])) {
                             <!--ambil data dari database, dan tampilkan kedalam tabel-->
                             <?php
                             //buat sql untuk tampilan data, gunakan kata kunci select
-                            $sql = "SELECT * FROM detail_ptb";
+                            $id_masalah = $_GET['id'];
+                            $sql = "SELECT * FROM detail_ptb WHERE id_masalah = $id_masalah";
                             $query = mysqli_query($koneksi, $sql) or die("SQL Anda Salah");
                             //Baca hasil query dari databse, gunakan perulangan untuk 
                             //Menampilkan data lebh dari satu. disini akan digunakan
@@ -56,11 +59,14 @@ if(!isset($_SESSION ['idsesi'])) {
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td colspan="7">
-                                    <a href="?page=ptb&actions=masalah_tambah" class="btn btn-info btn-sm">
-                                        Tambah Data Permasalahan
-                                    </a>
-                                </td>
+                            <td colspan="2">
+                            <button id="btnTambah" class="btn btn-info btn-sm" data-id="<?php echo $id_masalah; ?>">
+                                Tambah Data Permasalahan
+                            </button>
+
+                            </td>
+
+
                             </tr>
                         </tfoot>
                     </table>
@@ -69,3 +75,10 @@ if(!isset($_SESSION ['idsesi'])) {
         </div>
     </div>
 </div>
+
+                            <script>
+                                document.getElementById('btnTambah').addEventListener('click', function(){
+                                    var id_masalah = this.getAttribute('data-id');
+                                    window.location.href = '?page=ptb&actions=masalah_tambah&id=' + id_masalah;
+                                });
+                            </script>

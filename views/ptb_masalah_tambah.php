@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
@@ -10,7 +11,7 @@
                     <form class="form-horizontal" action="" method="post">
                         <div class="form-group">
                             <label for="tgl_ptb" class="col-sm-3 control-label">Tanggal</label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-3">
                                 <input type="date" name="tgl_ptb" class="form-control" id="inputEmail3">
                             </div>
                         </div>
@@ -44,6 +45,8 @@
                                 <input type="text" name="ket" class="form-control" id="inputEmail3" placeholder="">
                             </div>
                         </div>
+                        <!--<input type="hidden" name="id_masalah" value="<?php echo $data['id_masalah']; ?>">-->
+  
 
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-9">
@@ -56,7 +59,7 @@
 
                 </div>
                 <div class="panel-footer">
-                    <a href="?page=ptb&actions=masalah_detail" class="btn btn-danger btn-sm">
+                    <a href="?page=ptb&actions=masalah_tampil&id_masalah=<?php echo $data['id_masalah']; ?>" class="btn btn-danger btn-sm">
                         Kembali Ke Data Permasalahan PT
                     </a>
                 </div>
@@ -69,21 +72,24 @@
 <?php
 if($_POST){
     //Ambil data dari form
-	$tgl_ptb=$_POST['tgl_ptb'];
-	$permintaan=$_POST['permintaan'];
-	$kegiatan=$_POST['kegiatan'];
-    $hasil_keg=$_POST['hasil_keg'];
-    $lampiran=$_POST['lampiran'];
-    $ket=$_POST['ket'];
+    $tgl_ptb = $_POST['tgl_ptb'];
+    $permintaan = $_POST['permintaan'];
+    $kegiatan = $_POST['kegiatan'];
+    $hasil_keg = $_POST['hasil_keg'];
+    $lampiran = $_POST['lampiran'];
+    $ket = $_POST['ket'];
     
     //buat sql
-    $sql="INSERT INTO detail_ptb (tgl_ptb, permintaan, kegiatan, hasil_keg, lampiran, ket) VALUES ('$tgl_ptb','$permintaan','$kegiatan','$hasil_keg','$lampiran','$ket')";
-    $query=  mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
+    $sql = "INSERT INTO detail_ptb (tgl_ptb, permintaan, kegiatan, hasil_keg, lampiran, ket) VALUES ('$tgl_ptb', '$permintaan', '$kegiatan', '$hasil_keg', '$lampiran', '$ket')";
+    $query = mysqli_query($koneksi, $sql) or die ("SQL Simpan Error");
 
     if($query){
-        echo "<script>window.location.assign('?page=ptb&actions=masalah_detail');</script>";
-    }else{
+        //ambil id_masalah terakhir yang di-generate oleh MySQL
+        $id_masalah = mysqli_insert_id($koneksi);
+        echo "<script>window.location.assign('?page=ptb&actions=masalah_tampil&id_masalah=$id_masalah');</script>";
+    } else {
         echo "<script>alert('Simpan Data Gagal');</script>";
     }
 }
+
 ?>

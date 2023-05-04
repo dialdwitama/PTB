@@ -44,7 +44,7 @@ if(!isset($_SESSION ['idsesi'])) {
                                     <td><?= $data['progressReport'] ?></td>
                                     <td><?= $data['pic'] ?></td> 
                                     <td>
-                                        <a href="?page=ptb&actions=masalah_detail&id=<?= $data['id_pts'] ?>" class="btn btn-info btn-xs">
+                                        <a href="?page=ptb&actions=masalah_tampil&id=<?= $data['id_pts'] ?>" class="btn btn-info btn-xs">
                                             <span class="fa fa-eye"></span>
                                         </a>
                                         <a href="?page=ptb&actions=edit&id=<?= $data['id_pts'] ?>" class="btn btn-warning btn-xs">

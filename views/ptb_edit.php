@@ -47,17 +47,20 @@ $data= mysqli_fetch_array($ambil);
                         <!--Status-->
                         <div class="form-group">
                             <label for="stat" class="col-sm-3 control-label">Status</label>
-                            <div class="col-sm-2 col-xs-9">
-								<select name="stat" class="form-control">
-                                <?php 
-                                    $stat=  array("","Aman","Menunggu Penggabungan","Menunggu Pelaporan","Sudah Kedaluwarsa","Sedang Ditindaklanjuti","Tutup");
-                                    for($i=6;$i>0;$i--) {?>
-                                    <option value="<?=$i?>"> <?=$stat[$i]?> </option>
-                                    <?php }?>
-								</select>
+                            <div class="col-sm-3 col-xs-9">
+                                <select name="stat" class="form-control">
+                                <option value="">-- Pilih Status --</option>
+                                <option value="Aman" <?php if($data['stat'] == 'Aman') echo 'selected'; ?>>Aman</option>
+                                <option value="Menunggu Pergabungan" <?php if($data['stat'] == 'Menunggu Pergabungan') echo 'selected'; ?>>Menunggu Pergabungan</option>
+                                <option value="Menunggu Pelaporan" <?php if($data['stat'] == 'Menunggu Pelaporan') echo 'selected';?>>Menunggu Pelaporan</option>
+                                <option value="Sudah Kedaluwarsa" <?php if($data['stat'] == 'Sudah Kedaluwarsa') echo 'selected'; ?>>Sudah Kedaluwarsa</option>
+                                <option value="Sedang Ditindaklanjuti" <?php if($data['stat'] == 'Sedang Ditindaklanjuti') echo 'selected'; ?>>Sedang Ditindaklanjuti</option>
+                                <option value="Tutup" <?php if($data['stat'] == 'Tutup') echo 'selected'; ?>>Tutup</option>
+                                </select>
                             </div>
-                        </div>
+                            </div>
                         <!--Akhir Status-->
+                        
                         <div class="form-group">
                             <label for="progressReport" class="col-sm-3 control-label">Progress Report</label>
                             <div class="col-sm-9" >
